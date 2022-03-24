@@ -1,6 +1,8 @@
-//This is filler -- delete it and start coding your visualization tool here
-d3.select("#vis-container")
-  .append("text")
-  .attr("x", 20)
-  .attr("y", 20)
-  .text("Hello World!");
+//loads in the data from the cleaned CSV file of our movie dataset
+d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+  
+  //prints the first 20 rows of our dataset
+  for (var i = 0; i < 20; i++) {
+    console.log(data[i]);
+  }
+});
