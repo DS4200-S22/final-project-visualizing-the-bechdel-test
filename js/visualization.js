@@ -28,8 +28,10 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   function singleGenre(genres) {
     return genres.split(',')[0]
   }
-  const moviesbygenre = d3.group(data, d => d.genres.split(','))
+  const moviesbygenre = d3.group(data, d => d.genres.split(',')[0])
   console.log(moviesbygenre)
+  const moviesrollup = d3.rollup(data, v => v.length, d => d.genres.split(',')[0])
+  console.log(moviesrollup)
   
   // We will need scales for all of the following charts to be global
   let x3, y3;  
@@ -68,6 +70,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     // Find max y 
     let maxY3 = 100;
     //let maxY3 = d3.max(bar_lengths, (d) => { return d.score; });
+    //let maxY3 = d3.max(moviesrollup, (d, i) => { return moviesrollup[i]; });
 
     // Create Y scale
     y3 = d3.scaleLinear()
