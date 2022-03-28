@@ -4,7 +4,7 @@ This template is the starting point for your final project's webpage. Please rea
 
 ## Link to Project Webpage
 
-[Link to Project GitHub Page]https://ds4200-s22.github.io/final-project-visualizing-the-bechdel-test/
+[Visualizing the Bechdel Test](https://ds4200-s22.github.io/final-project-visualizing-the-bechdel-test/)
 
 ## Setup
 
