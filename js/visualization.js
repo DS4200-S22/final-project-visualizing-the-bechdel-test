@@ -1,6 +1,6 @@
 // Set margins and dimensions 
 const margin = { top: 50, right: 50, bottom: 50, left: 200 };
-const width = 900; //- margin.left - margin.right;
+const width = 1000; //- margin.left - margin.right;
 const height = 650; //- margin.top - margin.bottom;
 
 // Append svg object to the body of the page to house bar chart .
