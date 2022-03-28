@@ -27,7 +27,8 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   const moviesbygenre = d3.group(data, d => d.genres.split(',')[0])
   console.log(moviesbygenre)
   const moviesrollup = d3.rollup(data, v => v.length, d => d.genres.split(',')[0])
-  console.log(moviesrollup)
+  const moviesnestedrollup = d3.rollup(data, v => v.length, d => d.genres.split(',')[0], d => d.bechdel_rating)
+  console.log(moviesnestedrollup)
   
   // We will need scales for all of the following charts to be global
   let x3, y3;  
