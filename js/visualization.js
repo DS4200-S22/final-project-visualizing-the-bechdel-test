@@ -13,10 +13,6 @@ const svg3 = d3.select("#vis-container")
 // Initialize bars. We will need these to be global.
 let bars;
 
-let bar_lengths = [{Species: "setosa", score: 50},
-                   {Species: "versicolor", score: 50},
-                   {Species: "virginica", score: 50}];
-
 // Define color scale
 const color = d3.scaleOrdinal()
                 .domain(["setosa", "versicolor", "virginica"])
@@ -68,9 +64,8 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
       );
 
     // Find max y 
-    let maxY3 = 100;
     //let maxY3 = d3.max(bar_lengths, (d) => { return d.score; });
-    //let maxY3 = d3.max(moviesrollup, (d, i) => { return moviesrollup[i]; });
+    let maxY3 = d3.max(moviesrollup, (d) => d[1]);
 
     // Create Y scale
     y3 = d3.scaleLinear()
@@ -92,13 +87,13 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
 
     // Add points
     bars = svg3.selectAll(".bar")
-                            .data(data)
+                            .data(moviesrollup)
                             .enter()
                               .append("rect")
                               .attr("class", "bar")
                               .attr("x", (d, i) => x3(i))
-                              .attr("y", (d) => y3(d.bechdel_rating))
-                              .attr("height", (d) => (height - margin.bottom) - y3(d.bechdel_rating)) 
+                              .attr("y", (d, i) => y3(d[1]))
+                              .attr("height", (d, i) => (height - margin.bottom) - y3(d[1])) 
                               .attr("width", x3.bandwidth())
                               //.style("fill", (d) => color(d.genres))
                               .style("opacity", 0.5);
