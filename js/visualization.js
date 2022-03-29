@@ -33,7 +33,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
 
   const groupedMap = d3.group(
     data,
-    (d) => d["genres"],
+    (d) => d["genres"].split(',')[0],
     (d) => d["bechdel_rating"]
   );
 
@@ -42,18 +42,12 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   ).sort();
 
   const tableData = () => {
-    // How we want to aggregate the data
-    const reducer = (v) => d3.sum(v, (d) => d.total);
-
     return Array.from(groupedMap.entries()).map((g) => {
       const obj = {};
       obj["genres"] = g[0];
       for (let col of stackKeys) {
-        //console.log(g[1].get(col))
         const vals = g[1].get(col);
-        //console.log(Array.from(vals?.values() ?? ""))
-        //console.log(reducer(Array.from(vals?.values() ?? [])))
-        obj[col] = vals?.length;
+        obj[col] = vals?.length ?? 0;
       }
       return obj;
     });
