@@ -1,6 +1,6 @@
 // Set margins and dimensions
 const margin = { top: 50, right: 50, bottom: 50, left: 200 };
-const width = 1000; //- margin.left - margin.right;
+const width = 2000; //- margin.left - margin.right;
 const height = 650; //- margin.top - margin.bottom;
 
 // Append svg object to the body of the page to house bar chart .
@@ -18,13 +18,13 @@ const color = d3
 
 // Plotting
 d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
-  const moviesbygenre = d3.group(data, (d) => d.genres.split(",")[0]);
-  const moviesrollup = d3.rollup(
+  const moviesbygenre = d3.groups(data, (d) => d.genres.split(",")[0]);
+  const moviesrollup = d3.rollups(
     data,
     (v) => v.length,
     (d) => d.genres.split(",")[0]
   );
-  const moviesnestedrollup = d3.rollup(
+  const moviesnestedrollup = d3.rollups(
     data,
     (v) => v.length,
     (d) => d.genres.split(",")[0],
@@ -75,7 +75,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   // Create X scale
   x3 = d3
     .scaleBand()
-    .domain(d3.range(data.columns.length))
+    .domain(d3.range(moviesrollup.length))
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
@@ -83,7 +83,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   svg3
     .append("g")
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x3).tickFormat((i) => data[i].genres.split(",")[0]))
+    .call(d3.axisBottom(x3).tickFormat(((d, i) => moviesrollup[i][0])))
     .attr("font-size", "20px")
     .call((g) =>
       g
