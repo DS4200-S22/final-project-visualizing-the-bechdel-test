@@ -17,23 +17,32 @@ const color = d3
   .range(["#21908d88", "#21908d8c", "#21908dcf", "#21908dff"]);
 
 // Plotting
-d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
-  const moviesbygenre = d3.groups(data, (d) => d.genres.split(",")[0]);
+d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
+  const moviesbygenre = d3.groups(data, (d) => d.genre1);
   const moviesrollup = d3.rollups(
     data,
     (v) => v.length,
-    (d) => d.genres.split(",")[0]
+    (d) => d.genre1
   );
   const moviesnestedrollup = d3.rollups(
     data,
     (v) => v.length,
-    (d) => d.genres.split(",")[0],
+    (d) => d.genre1,
+    (d) => d.bechdel_rating
+  );
+
+  const moviesnestedrollup3genres = d3.rollups(
+    data,
+    (v) => v.length,
+    (d) => d.genre1,
+    (d) => d.genre2,
+    (d) => d.genre3,
     (d) => d.bechdel_rating
   );
 
   const groupedMap = d3.group(
     data,
-    (d) => d["genres"].split(',')[0],
+    (d) => d["genre1"],
     (d) => d["bechdel_rating"]
   );
 
@@ -44,7 +53,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   const tableData = () => {
     return Array.from(groupedMap.entries()).map((g) => {
       const obj = {};
-      obj["genres"] = g[0];
+      obj["genre1"] = g[0];
       for (let col of stackKeys) {
         const vals = g[1].get(col);
         obj[col] = vals?.length ?? 0;
