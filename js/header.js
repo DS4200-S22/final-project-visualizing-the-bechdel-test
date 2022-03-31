@@ -1,15 +1,15 @@
 // Set margins and dimensions
-const margin = { top: 50, right: 50, bottom: 50, left: 150 };
-const width = window.innerWidth; // - margin.left - margin.right;
-const height = 500 - margin.top - margin.bottom;
+const headerMargin = { top: 50, right: 50, bottom: 50, left: 150 };
+const headerWidth = window.innerWidth; // - margin.left - margin.right;
+const headerHeight = 500 - margin.top - margin.bottom;
 
 //Create space for the sticky linechart header on the page
 const header_holder = d3
   .select("#linechart-header")
   .append("svg")
-  .attr("width", width)
-  .attr("height", height - margin.top - margin.bottom)
-  .attr("viewBox", [0, 0, width, height + margin.bottom]);
+  .attr("width", headerWidth)
+  .attr("height", headerHeight - headerMargin.top - headerMargin.bottom)
+  .attr("viewBox", [0, 0, headerWidth, headerHeight + headerMargin.bottom]);
 
 //initializes the brush for the line graph header
 let year_brush;
@@ -19,7 +19,7 @@ let year_brush;
 d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   // citation: https://observablehq.com/@d3/d3-group
 
-  var pass_count = d3.rollup(
+  const pass_count = d3.rollup(
     data,
     (v) => v.length,
     (d) => d.year,
@@ -34,21 +34,21 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   //citation: https://d3-graph-gallery.com/graph/line_basic.html
 
   // Add X axis --> it is a date format
-  var x = d3
+  const x = d3
     .scaleTime()
     .domain(d3.extent(pass_count_sorted, (d) => new Date(d[0])))
-    .range([0, width]);
+    .range([0, headerWidth]);
 
   xAxis = header_holder
     .append("g")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + headerHeight + ")")
     .call(d3.axisBottom(x))
     .style("font", "20px arial");
 
   // Add Y axis
-  var y = d3.scaleLinear()
+  const y = d3.scaleLinear()
   .domain([0, 100])
-  .range([height, 0]);
+  .range([headerHeight, 0]);
 
   yAxis = header_holder
   .append("g")
@@ -56,27 +56,27 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   .style("font", "20px arial");
 
   // Add a clipPath: everything out of this area won't be drawn.
-  var clip = header_holder
+  const clip = header_holder
     .append("defs")
     .append("svg:clipPath")
     .attr("id", "clip")
     .append("svg:rect")
-    .attr("width", width)
-    .attr("height", height)
+    .attr("width", headerWidth)
+    .attr("height", headerHeight)
     .attr("x", 0)
     .attr("y", 0);
 
   // Add brushing
-  var brush = d3
+  const brush = d3
     .brushX() // Add the brush feature using the d3.brush function
     .extent([
       [0, 0],
-      [width, height],
+      [headerWidth, headerHeight],
     ])
     .on("end", updateChart); // Each time the brush selection changes, trigger the 'updateChart' function
 
   // Create the line variable: where both the line and the brush take place
-  var line = header_holder.append("g").attr("clip-path", "url(#clip)");
+  const line = header_holder.append("g").attr("clip-path", "url(#clip)");
 
   //citation: https://d3-graph-gallery.com/graph/line_brushZoom.html
 
@@ -104,7 +104,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   line.append("g").attr("class", "brush").call(brush);
 
   // A function that set idleTimeOut to null
-  var idleTimeout;
+  let idleTimeout;
   function idled() {
     idleTimeout = null;
   }

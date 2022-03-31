@@ -1,6 +1,6 @@
 // Set margins and dimensions
 const margin = { top: 50, right: 50, bottom: 50, left: 200 };
-const width = 2000; //- margin.left - margin.right;
+const width = window.innerWidth; //- margin.left - margin.right;
 const height = 650; //- margin.top - margin.bottom;
 
 // Append svg object to the body of the page to house bar chart .
@@ -87,7 +87,7 @@ d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
     .append("g")
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x3).tickFormat(((d, i) => moviesrollup[i][0])))
-    .attr("font-size", "20px")
+    .attr("font-size", "14px")
     .call((g) =>
       g
         .append("text")
