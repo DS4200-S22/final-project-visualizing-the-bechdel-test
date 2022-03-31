@@ -6,7 +6,8 @@ body {
 }
 
 h1, h2, h3 {
-	line-height: 1.2
+	line-height: 1.2;
+	text-align: left;
 }
 
 /* Narrow Column */
@@ -19,5 +20,11 @@ h1, h2, h3 {
 .vis-holder {
   width: 100%;
   height: 100%;
+  margin-left: 0;
+  margin-right:0;
+}
+
+.text-indentation {
+	margin-left: 17%;
 }
 

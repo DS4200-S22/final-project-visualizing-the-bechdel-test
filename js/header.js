@@ -1,7 +1,7 @@
 // Set margins and dimensions
 const margin = { top: 50, right: 50, bottom: 50, left: 150 };
 const width = window.innerWidth; // - margin.left - margin.right;
-const height = 400 - margin.top - margin.bottom;
+const height = 500 - margin.top - margin.bottom;
 
 //Create space for the sticky linechart header on the page
 const header_holder = d3
@@ -42,12 +42,18 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   xAxis = header_holder
     .append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x));
+    .call(d3.axisBottom(x))
+    .style("font", "20px arial");
 
   // Add Y axis
-  var y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
+  var y = d3.scaleLinear()
+  .domain([0, 100])
+  .range([height, 0]);
 
-  yAxis = header_holder.append("g").call(d3.axisLeft(y));
+  yAxis = header_holder
+  .append("g")
+  .call(d3.axisLeft(y))
+  .style("font", "20px arial");
 
   // Add a clipPath: everything out of this area won't be drawn.
   var clip = header_holder
@@ -72,8 +78,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   // Create the line variable: where both the line and the brush take place
   var line = header_holder.append("g").attr("clip-path", "url(#clip)");
 
-  //var pass_percentage = Object.values(pass_count)[1];
-  //pass_percentage/=
+  //citation: https://d3-graph-gallery.com/graph/line_brushZoom.html
 
   // Add the line
   line
