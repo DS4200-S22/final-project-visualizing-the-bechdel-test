@@ -17,7 +17,7 @@
 <body>
 
 <!-- Update this with your GitHub repo URL -->
-<p id=repo-link><span><a href='https://github.com/DS4200-S22/final-project-visualizing-the-bechdel-test'>Link to GitHub Repo</a></span></p>
+<p id="repo-link" class="text-indentation"><span><a href='https://github.com/DS4200-S22/final-project-visualizing-the-bechdel-test'>Link to GitHub Repo</a></span></p>
 
 <!-- Writeup -->
 <div class='content-column'>
@@ -45,13 +45,13 @@
 </div>
 
  
-<!-- Visualization -->   
-<h1>Visualization</h1>
-  
-<div class='vis-holder' id="vis-container">
-
+<!-- Visualization -->
+<div class= 'visualization-column'>   
+  <h1 class="text-indentation">Visualization</h1>
+    
+  <div class="vis-holder" id="linechart-header"> </div>
+  <div class="vis-holder" id="vis-container"> </div>
 </div>
-  
   
 <!-- More writeup -->
 <div class = 'content-column'>
@@ -112,5 +112,7 @@
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src='lib/d3.v6.1.1/d3.min.js'></script>
   <script src='js/visualization.js'></script>
+  <script src='js/header.js'></script>
+  
 </body>
 </html>
