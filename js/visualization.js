@@ -18,35 +18,44 @@ const color = d3
 
 // Plotting
 d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+  let genreCounts;
+  let stackFormatted;
+
   // These are hardcoded for now. Eventually, filter by this
   const minYear = 1900;
   const maxYear = 2022;
-  const genreSet = new Set();
-  const counts = new Map();
-  data.forEach((d) => {
-    const year = Number.parseInt(d.year);
-    if (year < minYear || year > maxYear) return;
-    const bechdel_rating = d.bechdel_rating;
-    d.genres.split(",").forEach((genre) => {
-      genreSet.add(genre);
-      counts.set(genre, counts.get(genre) || new Map());
-      counts
-        .get(genre)
-        .set(bechdel_rating, (counts.get(genre).get(bechdel_rating) || 0) + 1);
-    });
-  });
 
-  // Format for stacking
-  const stackFormatted = [];
-  counts.forEach((v, k) => {
-    stackFormatted.push({
-      genre: k,
-      0: v.get("0") || 0,
-      1: v.get("1") || 0,
-      2: v.get("2") || 0,
-      3: v.get("3") || 0,
+  function updateGenreRange(minYear, maxYear) {
+    genreCounts = new Map();
+    stackFormatted = [];
+    data.forEach((d) => {
+      const year = Number.parseInt(d.year);
+      if (year < minYear || year > maxYear) return;
+      const bechdel_rating = d.bechdel_rating;
+      d.genres.split(",").forEach((genre) => {
+        genreCounts.set(genre, genreCounts.get(genre) || new Map());
+        genreCounts
+          .get(genre)
+          .set(
+            bechdel_rating,
+            (genreCounts.get(genre).get(bechdel_rating) || 0) + 1
+          );
+      });
     });
-  });
+
+    // Format for stacking
+    genreCounts.forEach((v, k) => {
+      stackFormatted.push({
+        genre: k,
+        0: v.get("0") || 0,
+        1: v.get("1") || 0,
+        2: v.get("2") || 0,
+        3: v.get("3") || 0,
+      });
+    });
+  }
+
+  updateGenreRange();
 
   const stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
 
@@ -64,7 +73,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   // Create X scale
   x3 = d3
     .scaleBand()
-    .domain(d3.range(counts.size))
+    .domain(d3.range(genreCounts.size))
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
@@ -72,7 +81,9 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   svg3
     .append("g")
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x3).tickFormat((d) => Array.from(counts.keys())[d]))
+    .call(
+      d3.axisBottom(x3).tickFormat((d) => Array.from(genreCounts.keys())[d])
+    )
     .attr("font-size", "14px")
     .call((g) =>
       g
@@ -85,7 +96,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     );
 
   // Find max y
-  let maxY3 = d3.max(counts, (d) => {
+  let maxY3 = d3.max(genreCounts, (d) => {
     const valuesArray = Array.from(d[1].values());
     return d3.sum(valuesArray);
   });
