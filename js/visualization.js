@@ -17,52 +17,38 @@ const color = d3
   .range(["#21908d88", "#21908d8c", "#21908dcf", "#21908dff"]);
 
 // Plotting
-d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
-  const moviesbygenre = d3.groups(data, (d) => d.genre1);
-  const moviesrollup = d3.rollups(
-    data,
-    (v) => v.length,
-    (d) => d.genre1
-  );
-  const moviesnestedrollup = d3.rollups(
-    data,
-    (v) => v.length,
-    (d) => d.genre1,
-    (d) => d.bechdel_rating
-  );
-
-  const moviesnestedrollup3genres = d3.rollups(
-    data,
-    (v) => v.length,
-    (d) => d.genre1,
-    (d) => d.genre2,
-    (d) => d.genre3,
-    (d) => d.bechdel_rating
-  );
-
-  const groupedMap = d3.group(
-    data,
-    (d) => d["genre1"],
-    (d) => d["bechdel_rating"]
-  );
-
-  const stackKeys = Array.from(
-    new Set(data.map((d) => d["bechdel_rating"])).values()
-  ).sort();
-
-  const tableData = () => {
-    return Array.from(groupedMap.entries()).map((g) => {
-      const obj = {};
-      obj["genre1"] = g[0];
-      for (let col of stackKeys) {
-        const vals = g[1].get(col);
-        obj[col] = vals?.length ?? 0;
-      }
-      return obj;
+d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+  // These are hardcoded for now. Eventually, filter by this
+  const minYear = 1900;
+  const maxYear = 2022;
+  const genreSet = new Set();
+  const counts = new Map();
+  data.forEach((d) => {
+    const year = Number.parseInt(d.year);
+    if (year < minYear || year > maxYear) return;
+    const bechdel_rating = d.bechdel_rating;
+    d.genres.split(",").forEach((genre) => {
+      genreSet.add(genre);
+      counts.set(genre, counts.get(genre) || new Map());
+      counts
+        .get(genre)
+        .set(bechdel_rating, (counts.get(genre).get(bechdel_rating) || 0) + 1);
     });
-  };
+  });
 
-  const stackedData = d3.stack().keys(stackKeys)(tableData());
+  // Format for stacking
+  const stackFormatted = [];
+  counts.forEach((v, k) => {
+    stackFormatted.push({
+      genre: k,
+      0: v.get("0") || 0,
+      1: v.get("1") || 0,
+      2: v.get("2") || 0,
+      3: v.get("3") || 0,
+    });
+  });
+
+  const stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
 
   // We will need scales for all of the following charts to be global
   let x3, y3;
@@ -78,7 +64,7 @@ d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
   // Create X scale
   x3 = d3
     .scaleBand()
-    .domain(d3.range(moviesrollup.length))
+    .domain(d3.range(counts.size))
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
@@ -86,7 +72,7 @@ d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
   svg3
     .append("g")
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x3).tickFormat(((d, i) => moviesrollup[i][0])))
+    .call(d3.axisBottom(x3).tickFormat((d) => Array.from(counts.keys())[d]))
     .attr("font-size", "14px")
     .call((g) =>
       g
@@ -99,7 +85,10 @@ d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
     );
 
   // Find max y
-  let maxY3 = d3.max(moviesrollup, (d) => d[1]);
+  let maxY3 = d3.max(counts, (d) => {
+    const valuesArray = Array.from(d[1].values());
+    return d3.sum(valuesArray);
+  });
 
   // Create Y scale
   y3 = d3
@@ -128,7 +117,7 @@ d3.csv("data/data_bechdel_genresplit.csv").then((data) => {
     .append("g")
     .selectAll("g")
     // Enter in the stack data = loop key per key = group per group
-    .data(stackedData)
+    .data(stacked)
     .enter()
     .append("g")
     .attr("fill", (d) => color(d.key))
