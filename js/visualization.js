@@ -17,7 +17,7 @@ const color = d3
   .range(["#21908d88", "#21908d8c", "#21908dcf", "#21908dff"]);
 
 // Plotting
-d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+d3.csv("data/data_bechdel_newer.csv").then((data) => {
   let genreCounts;
   let stackFormatted;
   let stacked;

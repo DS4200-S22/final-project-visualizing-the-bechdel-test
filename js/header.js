@@ -16,7 +16,7 @@ let year_brush;
 
 //loads in the data from the cleaned CSV file of our movie dataset
 //Read the data
-d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+d3.csv("data/data_bechdel_newer.csv").then((data) => {
   // citation: https://observablehq.com/@d3/d3-group
 
   const pass_count = d3.rollup(
