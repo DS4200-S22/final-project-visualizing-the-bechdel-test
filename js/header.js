@@ -46,14 +46,12 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     .style("font", "20px arial");
 
   // Add Y axis
-  const y = d3.scaleLinear()
-  .domain([0, 100])
-  .range([headerHeight, 0]);
+  const y = d3.scaleLinear().domain([0, 100]).range([headerHeight, 0]);
 
   yAxis = header_holder
-  .append("g")
-  .call(d3.axisLeft(y))
-  .style("font", "20px arial");
+    .append("g")
+    .call(d3.axisLeft(y))
+    .style("font", "20px arial");
 
   // Add a clipPath: everything out of this area won't be drawn.
   const clip = header_holder
@@ -114,12 +112,17 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     // What are the selected boundaries?
     extent = event.selection;
 
+    let minYear;
+    let maxYear;
     // If no selection, back to initial coordinate. Otherwise, update X axis domain
     if (!extent) {
       if (!idleTimeout) return (idleTimeout = setTimeout(idled, 350)); // This allows to wait a little bit
       x.domain([4, 8]);
     } else {
+      minYear = x.invert(extent[0]);
+      maxYear = x.invert(extent[1]);
       x.domain([x.invert(extent[0]), x.invert(extent[1])]);
+
       line.select(".brush").call(brush.move, null); // This remove the grey brush area as soon as the selection has been done
     }
 
@@ -140,6 +143,8 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
             return y((passed / (passed + failed)) * 100);
           })
       );
+
+    window.barChart(minYear?.getFullYear(), maxYear?.getFullYear());
   }
 
   // If user double click, reinitialize the chart
