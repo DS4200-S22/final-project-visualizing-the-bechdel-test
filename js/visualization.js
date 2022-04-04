@@ -20,12 +20,14 @@ const color = d3
 d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   let genreCounts;
   let stackFormatted;
+  let stacked;
 
-  // These are hardcoded for now. Eventually, filter by this
-  const minYear = 1900;
-  const maxYear = 2022;
+  window.barChart = function(minYear, maxYear) {
 
-  function updateGenreRange(minYear, maxYear) {
+    // Clear existing bar chart
+    svg3.selectAll('*').remove();
+
+    // Create map of counts
     genreCounts = new Map();
     stackFormatted = [];
     data.forEach((d) => {
@@ -53,22 +55,16 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
         3: v.get("3") || 0,
       });
     });
-  }
 
-  updateGenreRange();
+    stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
 
-  const stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
-
-  // We will need scales for all of the following charts to be global
+     // We will need scales for all of the following charts to be global
   let x3, y3;
-
-  // We will need keys to be global
-  let xKey3, yKey3;
 
   // Barchart with counts of different species
 
-  xKey3 = "Genres";
-  yKey3 = "Count";
+  let xKey3 = "Genres";
+  let yKey3 = "Count";
 
   // Create X scale
   x3 = d3
@@ -100,7 +96,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     const valuesArray = Array.from(d[1].values());
     return d3.sum(valuesArray);
   });
-
+  
   // Create Y scale
   y3 = d3
     .scaleLinear()
@@ -141,4 +137,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
     .attr("y", (d) => y3(d[1]))
     .attr("height", (d) => y3(d[0]) - y3(d[1]))
     .attr("width", x3.bandwidth());
+  }
+
+  barChart();
 });
