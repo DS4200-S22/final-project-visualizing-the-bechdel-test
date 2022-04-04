@@ -3,7 +3,7 @@ const margin = { top: 50, right: 50, bottom: 50, left: 200 };
 const width = window.innerWidth; //- margin.left - margin.right;
 const height = 650; //- margin.top - margin.bottom;
 
-// Append svg object to the body of the page to house bar chart .
+// Append SVG object to the body of the page to house bar chart .
 const svg3 = d3
   .select("#vis-container")
   .append("svg")
@@ -11,7 +11,7 @@ const svg3 = d3
   .attr("height", height - margin.top - margin.bottom)
   .attr("viewBox", [0, 0, width, height]);
 
-// Define color scale
+// Color scale
 const color = d3
   .scaleOrdinal()
   .range(["#21908d88", "#21908d8c", "#21908dcf", "#21908dff"]);
@@ -22,6 +22,7 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
   let stackFormatted;
   let stacked;
 
+  // Assign global function accessible to other scripts
   window.barChart = function (minYear, maxYear) {
     // Clear existing bar chart
     svg3.selectAll("*").remove();
@@ -44,6 +45,14 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
       });
     });
 
+    // Sort by sum
+    genreCounts = new Map(
+      [...genreCounts].sort(
+        (a, b) =>
+          d3.sum(Array.from(a[1].values())) < d3.sum(Array.from(b[1].values()))
+      )
+    );
+
     // Format for stacking
     genreCounts.forEach((v, k) => {
       stackFormatted.push({
@@ -57,16 +66,12 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
 
     stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
 
-    // We will need scales for all of the following charts to be global
-    let x3, y3;
+    // Axis labels
+    const xKey3 = "Genres";
+    const yKey3 = "Count";
 
-    // Barchart with counts of different species
-
-    let xKey3 = "Genres";
-    let yKey3 = "Count";
-
-    // Create X scale
-    x3 = d3
+    // Create x scale
+    const x3 = d3
       .scaleBand()
       .domain(d3.range(genreCounts.size))
       .range([margin.left, width - margin.right])
@@ -91,18 +96,18 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
       );
 
     // Find max y
-    let maxY3 = d3.max(genreCounts, (d) => {
+    const maxY3 = d3.max(genreCounts, (d) => {
       const valuesArray = Array.from(d[1].values());
       return d3.sum(valuesArray);
     });
 
-    // Create Y scale
-    y3 = d3
+    // Create y scale
+    const y3 = d3
       .scaleLinear()
       .domain([0, maxY3])
       .range([height - margin.bottom, margin.top]);
 
-    //    Add y axis
+    // Add y axis
     svg3
       .append("g")
       .attr("transform", `translate(${margin.left}, 0)`)
@@ -138,5 +143,6 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
       .attr("width", x3.bandwidth());
   };
 
+  // Draw the initial bar chart
   barChart();
 });
