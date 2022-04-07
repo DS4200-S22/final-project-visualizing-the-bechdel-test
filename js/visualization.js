@@ -67,8 +67,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     stacked = d3.stack().keys(["0", "1", "2", "3"])(stackFormatted);
 
     // Axis labels
-    const xKey3 = "Genres";
-    const yKey3 = "Count";
+    const xKey3 = "Genre";
+    const yKey3 = "Number of Movies";
 
     // Create x scale
     const x3 = d3
@@ -88,10 +88,10 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .call((g) =>
         g
           .append("text")
-          .attr("x", width - margin.right)
+          .attr("x", width / 2)
           .attr("y", margin.bottom - 4)
           .attr("fill", "black")
-          .attr("text-anchor", "end")
+          .attr("text-anchor", "center")
           .text(xKey3)
       );
 
@@ -117,7 +117,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         g
           .append("text")
           .attr("x", 0)
-          .attr("y", margin.top)
+          .attr("y", margin.top - 10)
           .attr("fill", "black")
           .attr("text-anchor", "end")
           .text(yKey3)

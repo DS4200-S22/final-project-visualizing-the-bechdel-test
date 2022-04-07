@@ -29,9 +29,9 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     [...pass_count].sort((a, b) => String(a[0]).localeCompare(b[0]))
   );
 
-  //console.log(pass_count);
-
   //citation: https://d3-graph-gallery.com/graph/line_basic.html
+  const xTitle = "Year"
+  const yTitle = "Percent of movies that pass the Bechdel Test"
 
   // Add X axis --> it is a date format
   const x = d3
@@ -43,15 +43,33 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     .append("g")
     .attr("transform", "translate(0," + headerHeight + ")")
     .call(d3.axisBottom(x))
-    .style("font", "20px arial");
+    .style("font", "20px arial")
+    .call((g) =>
+    g
+      .append("text")
+      .attr("x", headerWidth / 2)
+      .attr("y", headerMargin.bottom - 4)
+      .attr("fill", "black")
+      .attr("text-anchor", "center")
+      .text(xTitle)
+  );
 
   // Add Y axis
-  const y = d3.scaleLinear().domain([0, 100]).range([headerHeight, 0]);
+  const y = d3.scaleLinear().domain([0, 100]).range([headerHeight, headerMargin.top]);
 
   yAxis = header_holder
     .append("g")
     .call(d3.axisLeft(y))
-    .style("font", "20px arial");
+    .style("font", "20px arial")
+    .call((g) =>
+    g
+      .append("text")
+      .attr("x", 5)
+      .attr("y", headerMargin.top - 15)
+      .attr("fill", "black")
+      .attr("text-anchor", "end")
+      .text(yTitle)
+  );
 
   // Add a clipPath: everything out of this area won't be drawn.
   const clip = header_holder
@@ -68,7 +86,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   const brush = d3
     .brushX() // Add the brush feature using the d3.brush function
     .extent([
-      [0, 0],
+      [0, headerMargin.top],
       [headerWidth, headerHeight],
     ])
     .on("end", updateChart); // Each time the brush selection changes, trigger the 'updateChart' function

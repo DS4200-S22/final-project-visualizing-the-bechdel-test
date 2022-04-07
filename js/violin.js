@@ -21,7 +21,7 @@ const svg = d3
   );
 
 // Read the data and compute summary statistics for each specie
-d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
+d3.csv("data/data_bechdel_newer.csv").then((data) => {
   // Build and Show the Y scale
   const y = d3
     .scaleLinear()
@@ -93,7 +93,6 @@ d3.csv("data/data_bechdel_new - data_bechdel.csv").then((data) => {
 
   // What is the biggest number of value in a bin? We need it cause this value will have a width of 100% of the bandwidth.
   let maxNum = 0;
-  console.log(sumstat);
   sumstat.forEach((v) => {
     const maxInCategory = d3.max(Array.from(v.values()));
     maxNum = d3.max([maxNum, maxInCategory]);
