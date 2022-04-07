@@ -42,7 +42,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     const yTitle = titleMap[selectedAttribute];
 
     // Build and Show the Y scale
-    let maxY = d3.max(data, (d) => Number.parseInt(d[selectedAttribute]));
+    let maxY = d3.max(data, (d) => +d[selectedAttribute]);
     // Round up to the nearest whole number
     maxY = Math.ceil(maxY);
 
