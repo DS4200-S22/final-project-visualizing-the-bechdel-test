@@ -3,7 +3,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1312,tt0018192,2,Abel Gance's Napoleon,1927,Fail,8.2,7707,movie,330,"Biography,Drama,History"
 6813,tt3529612,3,River of Fundament,2014,Pass,6.7,246,movie,319,Drama
 1757,tt0425637,1,Chi bi (Red Cliff),2008,Fail,7.4,45705,movie,288,"Action,Adventure,Drama"
-5189,tt0109849,3,Fritänkaren,1994,Pass,7.5,86,video,276,"Biography,Drama"
+5189,tt0109849,3,FritÃ¤nkaren,1994,Pass,7.5,86,video,276,"Biography,Drama"
 4556,tt1236371,3,Mysteries of Lisbon,2010,Pass,7.4,3415,movie,272,"Drama,Mystery,Romance"
 4917,tt0107007,0,Gettysburg,1993,Fail,7.7,28776,movie,271,"Drama,History,War"
 14702,tt2180411,3,Into the Woods,2014,Pass,5.9,277572,movie,250,"Adventure,Comedy,Drama"
@@ -31,7 +31,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2861,tt0049934,3,War and Peace,1956,Pass,6.8,9862,movie,208,"Drama,Romance,War"
 3600,tt0047478,0,Shichinin no samurai,1954,Fail,8.6,336072,movie,207,"Action,Drama"
 3706,tt0060107,1,Andrei Rublev,1966,Fail,8.1,52432,movie,205,"Biography,Drama,History"
-7120,tt0055805,2,Boccaccio á70,1962,Fail,7.1,4398,movie,205,"Comedy,Fantasy,Romance"
+7120,tt0055805,2,Boccaccio Ã¡70,1962,Fail,7.1,4398,movie,205,"Comedy,Fantasy,Romance"
 4391,tt0104797,3,Malcolm X,1992,Pass,7.7,92459,movie,202,"Biography,Drama,History"
 3896,tt0071562,2,"Godfather: Part II, The",1974,Fail,9,1216386,movie,202,"Crime,Drama"
 3368,tt0073198,3,"Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles",1975,Pass,7.8,8652,movie,202,Drama
@@ -518,7 +518,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 8265,tt0067372,1,Macbeth,1971,Fail,7.4,13650,movie,140,"Drama,History"
 6505,tt0074400,0,"Desert of the Tartars, The",1976,Fail,7.5,2182,movie,140,"Drama,History,War"
 2644,tt0093512,2,Maurice,1987,Fail,7.7,18862,movie,140,"Drama,Romance"
-7840,tt0107151,3,La casa de los espíritus,1993,Pass,6.9,22512,movie,140,"Drama,Romance"
+7840,tt0107151,3,La casa de los espÃ­ritus,1993,Pass,6.9,22512,movie,140,"Drama,Romance"
 3824,tt1977739,3,Call Girl,2012,Pass,6.5,4691,movie,140,"Drama,Thriller"
 8458,tt0015881,3,Greed,1924,Pass,8.1,9751,movie,140,"Drama,Thriller,Western"
 9107,tt0104105,0,Dien Bien Phu,1992,Fail,6.2,620,movie,140,"Drama,War"
@@ -638,7 +638,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3399,tt0948470,2,"Amazing Spider-Man, The",2012,Fail,6.9,628912,movie,136,"Action,Adventure,Sci-Fi"
 5351,tt1843866,3,Captain America: The Winter Soldier,2014,Pass,7.7,805061,movie,136,"Action,Adventure,Sci-Fi"
 38,tt0117500,1,"Rock, The",1996,Fail,7.4,329612,movie,136,"Action,Adventure,Thriller"
-6158,tt2093990,1,El Niño,2014,Fail,6.4,6073,movie,136,"Action,Crime,Drama"
+6158,tt2093990,1,El NiÃ±o,2014,Fail,6.4,6073,movie,136,"Action,Crime,Drama"
 9529,tt0099426,1,Bullet in the Head,1990,Fail,7.6,10587,movie,136,"Action,Crime,Drama"
 7579,tt4630562,3,"Fate of the Furious, The",2017,Pass,6.6,224514,movie,136,"Action,Crime,Thriller"
 36,tt0133093,3,"Matrix, The",1999,Pass,8.7,1839378,movie,136,"Action,Sci-Fi"
@@ -953,7 +953,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 819,tt1069238,3,Okuribito (Departures),2008,Pass,8.1,51327,movie,130,"Drama,Music"
 5815,tt0443489,3,Dreamgirls,2006,Pass,6.5,72811,movie,130,"Drama,Music,Musical"
 942,tt0120802,3,"Red Violin, The",1998,Pass,7.6,32813,movie,130,"Drama,Music,Mystery"
-5105,tt2404461,3,Le Passé,2013,Pass,7.7,48222,movie,130,"Drama,Mystery"
+5105,tt2404461,3,Le PassÃ©,2013,Pass,7.7,48222,movie,130,"Drama,Mystery"
 2237,tt0071315,2,Chinatown,1974,Fail,8.2,316346,movie,130,"Drama,Mystery,Thriller"
 2036,tt0482571,1,"Prestige, The",2006,Fail,8.5,1279254,movie,130,"Drama,Mystery,Thriller"
 5375,tt0067445,0,Death in Venice,1971,Fail,7.4,20615,movie,130,"Drama,Romance"
@@ -1233,7 +1233,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 8495,tt5057140,1,Hold the Dark,2018,Fail,5.6,36376,movie,125,"Action,Drama,Thriller"
 524,tt0119173,3,G.I. Jane,1997,Pass,6,79269,movie,125,"Action,Drama,War"
 1026,tt0118688,2,Batman & Robin,1997,Fail,3.8,245668,movie,125,"Action,Sci-Fi"
-484,tt0092067,3,Tenkû no shiro Rapyuta,1986,Pass,8,161334,movie,125,"Adventure,Animation,Family"
+484,tt0092067,3,TenkÃ» no shiro Rapyuta,1986,Pass,8,161334,movie,125,"Adventure,Animation,Family"
 864,tt0245429,3,Spirited Away,2001,Pass,8.6,720395,movie,125,"Adventure,Animation,Family"
 4508,tt2312390,3,"Gamers: Hands of Fate, The",2013,Pass,6.8,800,movie,125,"Adventure,Comedy,Fantasy"
 2402,tt0319061,1,Big Fish,2003,Fail,8,433230,movie,125,"Adventure,Drama,Fantasy"
@@ -1243,7 +1243,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4965,tt2140373,3,Saving Mr. Banks,2013,Pass,7.5,159204,movie,125,"Biography,Comedy,Drama"
 3799,tt0072890,3,Dog Day Afternoon,1975,Pass,8,250367,movie,125,"Biography,Crime,Drama"
 7837,tt2392830,3,A Quiet Passion,2016,Pass,6.5,5619,movie,125,"Biography,Drama"
-2094,tt1048171,3,Séraphine,2008,Pass,7.4,6224,movie,125,"Biography,Drama"
+2094,tt1048171,3,SÃ©raphine,2008,Pass,7.4,6224,movie,125,"Biography,Drama"
 1368,tt0031516,2,Juarez,1939,Fail,7.1,2333,movie,125,"Biography,Drama,History"
 6806,tt0130444,3,Aimee & Jaguar,1999,Pass,7.2,6497,movie,125,"Biography,Drama,Romance"
 6507,tt0082158,1,Chariots of Fire,1981,Fail,7.2,58731,movie,125,"Biography,Drama,Sport"
@@ -1705,7 +1705,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2662,tt0090756,1,Blue Velvet,1986,Fail,7.7,193129,movie,120,"Crime,Drama,Mystery"
 7984,tt3203620,3,"Dinner, The",2017,Pass,4.5,8497,movie,120,"Crime,Drama,Thriller"
 625,tt0181984,1,Boiler Room,2000,Fail,7,52309,movie,120,"Crime,Drama,Thriller"
-7247,tt0084358,3,Mortelle randonnée,1983,Pass,7.1,2446,movie,120,"Crime,Mystery,Romance"
+7247,tt0084358,3,Mortelle randonnÃ©e,1983,Pass,7.1,2446,movie,120,"Crime,Mystery,Romance"
 6298,tt0091474,1,Manhunter,1986,Fail,7.2,71772,movie,120,"Crime,Mystery,Thriller"
 5260,tt0102370,3,Madonna: Truth or Dare,1991,Pass,6.4,9454,movie,120,"Documentary,Music"
 2980,tt0772154,3,Apart From That,2006,Pass,6,111,movie,120,Drama
@@ -1718,7 +1718,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6222,tt4056738,3,Do You Believe?,2015,Pass,6.1,7686,movie,120,Drama
 5131,tt1657510,1,Gimme Shelter,2013,Fail,6.5,8686,movie,120,Drama
 4091,tt1403214,3,Paradies: Liebe,2012,Pass,7.1,9013,movie,120,Drama
-1746,tt0938341,1,Tôkyô sonata (Tokyo Sonata),2008,Fail,7.5,10217,movie,120,Drama
+1746,tt0938341,1,TÃ´kyÃ´ sonata (Tokyo Sonata),2008,Fail,7.5,10217,movie,120,Drama
 1766,tt0079095,3,"Marriage of Maria Braun, The",1979,Pass,7.8,13451,movie,120,Drama
 6792,tt0089424,2,Kiss of the Spider Woman,1985,Fail,7.3,15382,movie,120,Drama
 2610,tt0457655,2,After the Wedding,2006,Fail,7.7,34157,movie,120,Drama
@@ -1821,7 +1821,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2366,tt0114323,3,Safe,1995,Pass,7.2,14676,movie,119,Drama
 3314,tt0369672,3,A Love Song for Bobby Long,2004,Pass,7.1,26014,movie,119,Drama
 2548,tt0120586,2,American History X,1998,Fail,8.5,1087627,movie,119,Drama
-368,tt0165078,3,Wandâfuru raifu,1998,Pass,7.6,11603,movie,119,"Drama,Fantasy"
+368,tt0165078,3,WandÃ¢furu raifu,1998,Pass,7.6,11603,movie,119,"Drama,Fantasy"
 3436,tt1536048,3,W.E.,2011,Pass,6.3,12792,movie,119,"Drama,History,Romance"
 5954,tt0265349,2,"Mothman Prophecies, The",2002,Fail,6.4,79522,movie,119,"Drama,Horror,Mystery"
 6494,tt2554274,3,Crimson Peak,2015,Pass,6.5,143383,movie,119,"Drama,Horror,Mystery"
@@ -2075,7 +2075,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1460,tt0304415,3,Mona Lisa Smile,2003,Pass,6.5,81032,movie,117,Drama
 7677,tt2763304,3,T2 Trainspotting,2017,Pass,7.2,121376,movie,117,Drama
 5067,tt1937390,3,Nymphomaniac: Volume 1,2013,Pass,6.9,121900,movie,117,Drama
-7238,tt0073650,3,"Salò o le 120 giornate di Sodoma [Salo, or the 120 Days of Sodom]",1975,Pass,5.9,58458,movie,117,"Drama,Horror"
+7238,tt0073650,3,"SalÃ² o le 120 giornate di Sodoma [Salo, or the 120 Days of Sodom]",1975,Pass,5.9,58458,movie,117,"Drama,Horror"
 721,tt1426374,1,Los viajes del viento,2009,Fail,7.4,2367,movie,117,"Drama,Music"
 3708,tt1555064,3,Country Strong,2010,Pass,6.3,18014,movie,117,"Drama,Music"
 2457,tt0105316,3,Sarafina!,1992,Pass,6.4,1993,movie,117,"Drama,Musical"
@@ -2161,7 +2161,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4092,tt1854236,3,Den skaldede frisor,2012,Pass,6.5,14028,movie,116,"Comedy,Drama,Romance"
 5996,tt0070460,3,Day for Night,1973,Pass,8,22198,movie,116,"Comedy,Drama,Romance"
 2874,tt0084805,1,Tootsie,1982,Fail,7.4,103961,movie,116,"Comedy,Drama,Romance"
-614,tt0118799,0,La vita è bella,1997,Fail,8.6,669541,movie,116,"Comedy,Drama,Romance"
+614,tt0118799,0,La vita Ã¨ bella,1997,Fail,8.6,669541,movie,116,"Comedy,Drama,Romance"
 2315,tt0101410,1,Barton Fink,1991,Fail,7.7,119084,movie,116,"Comedy,Drama,Thriller"
 410,tt0486583,1,Fred Claus,2007,Fail,5.6,43571,movie,116,"Comedy,Family,Fantasy"
 8937,tt8079248,1,Yesterday,2019,Fail,6.8,146135,movie,116,"Comedy,Fantasy,Music"
@@ -2199,7 +2199,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1649,tt1228987,1,Let Me In,2010,Fail,7.1,118868,movie,116,"Drama,Fantasy,Horror"
 7838,tt5607714,3,On Body and Soul,2017,Pass,7.6,26889,movie,116,"Drama,Fantasy,Mystery"
 536,tt1424431,1,Tsar,2009,Fail,6.8,3025,movie,116,"Drama,History"
-330,tt0424205,0,Joyeux Noël,2005,Fail,7.7,29512,movie,116,"Drama,History,Music"
+330,tt0424205,0,Joyeux NoÃ«l,2005,Fail,7.7,29512,movie,116,"Drama,History,Music"
 630,tt0408236,1,Sweeney Todd: The Demon Barber of Fleet Street,2007,Fail,7.3,359477,movie,116,"Drama,Horror,Musical"
 8025,tt3335606,1,Berlin Syndrome,2017,Fail,6.3,24646,movie,116,"Drama,Horror,Mystery"
 10116,tt9639470,3,Last Night in Soho,2021,Pass,7.1,89623,movie,116,"Drama,Horror,Mystery"
@@ -2445,7 +2445,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9925,tt10612922,2,One Night in Miami...,2020,Fail,7.1,30803,movie,114,Drama
 1775,tt1588895,3,Uncle Boonmee Who Can Recall His Past Lives,2010,Pass,6.7,15369,movie,114,"Drama,Fantasy"
 5202,tt1220214,1,Heartless,2009,Fail,6,10107,movie,114,"Drama,Fantasy,Horror"
-668,tt1139797,1,Låt den rätte komma in (Let the Right One In),2008,Fail,7.9,213420,movie,114,"Drama,Fantasy,Horror"
+668,tt1139797,1,LÃ¥t den rÃ¤tte komma in (Let the Right One In),2008,Fail,7.9,213420,movie,114,"Drama,Fantasy,Horror"
 5369,tt0120632,3,City of Angels,1998,Pass,6.7,118772,movie,114,"Drama,Fantasy,Romance"
 2706,tt1781812,3,Exit Humanity,2011,Pass,5.3,4553,movie,114,"Drama,Horror"
 2320,tt0365376,3,A Tale of Two Sisters,2003,Pass,7.2,60821,movie,114,"Drama,Horror,Mystery"
@@ -2507,7 +2507,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1884,tt0980970,3,"Chronicles of Narnia: The Voyage of the Dawn Treader, The",2010,Pass,6.3,150680,movie,113,"Adventure,Family,Fantasy"
 487,tt0385752,3,"Golden Compass, The",2007,Pass,6.1,185631,movie,113,"Adventure,Family,Fantasy"
 4291,tt1909270,3,17 Miracles,2011,Pass,6.5,1501,movie,113,"Adventure,History"
-5354,tt2776074,3,Angélique,2013,Pass,6.2,1605,movie,113,"Adventure,History,Romance"
+5354,tt2776074,3,AngÃ©lique,2013,Pass,6.2,1605,movie,113,"Adventure,History,Romance"
 5793,tt0270288,2,Confessions of a Dangerous Mind,2002,Fail,7,87440,movie,113,"Biography,Comedy,Crime"
 1652,tt1371155,3,Made In Dagenham,2010,Pass,7.2,15162,movie,113,"Biography,Comedy,Drama"
 3678,tt1674773,3,Hannah Arendt,2012,Pass,7.1,11194,movie,113,"Biography,Drama"
@@ -2521,7 +2521,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6403,tt0398165,1,"Longest Yard, The",2005,Fail,6.4,174607,movie,113,"Comedy,Crime,Sport"
 4579,tt0097235,0,"Dream Team, The",1989,Fail,6.5,15120,movie,113,"Comedy,Crime,Thriller"
 9102,tt5247704,2,Back to Burgundy (Ce que nous lie),2017,Fail,6.9,4587,movie,113,"Comedy,Drama"
-7796,tt1039960,0,Estômago,2007,Fail,7.8,6508,movie,113,"Comedy,Drama"
+7796,tt1039960,0,EstÃ´mago,2007,Fail,7.8,6508,movie,113,"Comedy,Drama"
 6937,tt1385912,1,I can do bad all by myself,2009,Fail,4.6,10014,movie,113,"Comedy,Drama"
 7214,tt0319769,1,Los lunes al sol,2002,Fail,7.6,14087,movie,113,"Comedy,Drama"
 7298,tt0120533,3,Celebrity,1998,Pass,6.3,26687,movie,113,"Comedy,Drama"
@@ -2687,7 +2687,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1203,tt0093693,3,Overboard,1987,Pass,6.9,57952,movie,112,"Comedy,Romance"
 4943,tt0032904,3,"Philadelphia Story, The",1940,Pass,7.9,67772,movie,112,"Comedy,Romance"
 817,tt0155711,1,Flawless,1999,Fail,6.5,18721,movie,112,Crime
-9256,tt4895668,1,São Jorge,2016,Fail,7,1970,movie,112,"Crime,Drama"
+9256,tt4895668,1,SÃ£o Jorge,2016,Fail,7,1970,movie,112,"Crime,Drama"
 5638,tt0101507,2,Boyz n the Hood,1991,Fail,7.8,136378,movie,112,"Crime,Drama"
 2099,tt0042208,1,"Asphalt Jungle, The",1950,Fail,7.9,26177,movie,112,"Crime,Drama,Film-Noir"
 7177,tt3631112,3,"Girl on the Train, The",2016,Pass,6.5,183053,movie,112,"Crime,Drama,Mystery"
@@ -2838,7 +2838,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2757,tt0063850,1,If....,1968,Fail,7.5,23481,movie,111,"Crime,Drama"
 2502,tt0094608,3,"Accused, The",1988,Pass,7.2,34607,movie,111,"Crime,Drama"
 794,tt0037913,3,Mildred Pierce,1945,Pass,8,25186,movie,111,"Crime,Drama,Film-Noir"
-9991,tt0112769,3,La cérémonie,1995,Pass,7.5,11518,movie,111,"Crime,Drama,Mystery"
+9991,tt0112769,3,La cÃ©rÃ©monie,1995,Pass,7.5,11518,movie,111,"Crime,Drama,Mystery"
 2968,tt0800241,3,Transsiberian,2008,Pass,6.7,52563,movie,111,"Crime,Drama,Mystery"
 460,tt0118636,1,Apt Pupil,1998,Fail,6.7,38052,movie,111,"Crime,Drama,Thriller"
 19,tt0200465,3,"Bank Job, The",2008,Pass,7.2,179356,movie,111,"Crime,Drama,Thriller"
@@ -2987,7 +2987,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4347,tt0057542,3,Summer Magic,1963,Pass,7.1,2406,movie,110,"Comedy,Family,Musical"
 3679,tt0116365,3,"Frighteners, The",1996,Pass,7.1,86834,movie,110,"Comedy,Fantasy,Horror"
 753,tt0077631,3,Grease,1978,Pass,7.2,260515,movie,110,"Comedy,Musical,Romance"
-3902,tt0344604,3,Après Vous,2003,Pass,6.5,3114,movie,110,"Comedy,Romance"
+3902,tt0344604,3,AprÃ¨s Vous,2003,Pass,6.5,3114,movie,110,"Comedy,Romance"
 1259,tt0031725,3,Ninotchka,1939,Pass,7.9,20684,movie,110,"Comedy,Romance"
 2194,tt1334512,2,Arthur,2011,Fail,5.7,51686,movie,110,"Comedy,Romance"
 1133,tt0106673,3,Dave,1993,Pass,6.8,52715,movie,110,"Comedy,Romance"
@@ -3167,7 +3167,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4526,tt0300140,3,Lilya 4-Ever,2002,Pass,7.8,44973,movie,109,"Crime,Drama"
 6845,tt3812402,3,How to Steal a Dog / Gae-leul hoom-chi-neun wan-byeok-han bang-beob,2014,Pass,6.8,421,movie,109,"Crime,Drama,Family"
 3481,tt1480656,1,Cosmopolis,2012,Fail,5.1,46601,movie,109,"Crime,Drama,Fantasy"
-2324,tt0018737,3,Pandora's Box (Die Büchse der Pandora),1929,Pass,7.8,10564,movie,109,"Crime,Drama,Romance"
+2324,tt0018737,3,Pandora's Box (Die BÃ¼chse der Pandora),1929,Pass,7.8,10564,movie,109,"Crime,Drama,Romance"
 9444,tt11456054,3,Run Hide Fight,2020,Pass,6.4,21877,movie,109,"Crime,Drama,Thriller"
 4003,tt0954947,1,"Killer Inside Me, The",2010,Fail,6.1,34028,movie,109,"Crime,Drama,Thriller"
 9476,tt0457433,3,A Perfect Stranger,2007,Pass,5.7,47383,movie,109,"Crime,Mystery,Thriller"
@@ -3339,7 +3339,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 7451,tt3686998,3,"Red Pill, The",2016,Pass,8.2,11147,movie,108,Documentary
 4536,tt2366450,3,Stories We Tell,2012,Pass,7.6,13119,movie,108,Documentary
 3309,tt0303297,3,Amandla! A Revolution in Four Part Harmony,2002,Pass,7.3,603,movie,108,"Documentary,History,Music"
-7231,tt4667788,3,Grüße aus Fukushima (Greetings from Fukushima),2016,Pass,6.8,770,movie,108,Drama
+7231,tt4667788,3,GrÃ¼ÃŸe aus Fukushima (Greetings from Fukushima),2016,Pass,6.8,770,movie,108,Drama
 9218,tt7902124,3,"Ground Beneath My Feet, The",2019,Pass,6.5,1045,movie,108,Drama
 8122,tt3595966,3,Conducta,2014,Pass,7.6,1450,movie,108,Drama
 8921,tt2690226,3,"Chaperone, The",2018,Pass,6.6,1518,movie,108,Drama
@@ -3371,7 +3371,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 833,tt0054743,3,"Children's Hour, The",1961,Pass,7.8,16083,movie,108,"Drama,Romance"
 5233,tt0424880,3,Candy,2006,Pass,7.2,45187,movie,108,"Drama,Romance"
 133,tt0338013,2,Eternal Sunshine of the Spotless Mind,2004,Fail,8.3,970016,movie,108,"Drama,Romance,Sci-Fi"
-5299,tt0213847,3,Malèna,2000,Pass,7.5,99275,movie,108,"Drama,Romance,War"
+5299,tt0213847,3,MalÃ¨na,2000,Pass,7.5,99275,movie,108,"Drama,Romance,War"
 7438,tt0097883,3,Millennium,1989,Pass,5.8,6351,movie,108,"Drama,Sci-Fi,Thriller"
 6084,tt0470752,1,Ex Machina,2015,Fail,7.7,518753,movie,108,"Drama,Sci-Fi,Thriller"
 8021,tt0099768,3,Hidden Agenda,1990,Pass,6.9,4015,movie,108,"Drama,Thriller"
@@ -3433,7 +3433,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 5482,tt2281587,1,Muppets Most Wanted,2014,Fail,6.4,33914,movie,107,"Adventure,Comedy,Crime"
 3455,tt0190590,0,"O Brother, Where Art Thou?",2000,Fail,7.7,303501,movie,107,"Adventure,Comedy,Crime"
 5797,tt0055458,3,Snow White and the Three Stooges,1961,Pass,5.3,1067,movie,107,"Adventure,Comedy,Family"
-6590,tt0250223,3,Asterix & Obelix: Mission Cleopatra (Astérix et Obélix: Mission Cléopâtre),2002,Pass,6.7,51923,movie,107,"Adventure,Comedy,Family"
+6590,tt0250223,3,Asterix & Obelix: Mission Cleopatra (AstÃ©rix et ObÃ©lix: Mission ClÃ©opÃ¢tre),2002,Pass,6.7,51923,movie,107,"Adventure,Comedy,Family"
 1125,tt0103247,1,White Fang,1991,Fail,6.7,20685,movie,107,"Adventure,Drama"
 1569,tt0116329,3,Fly Away Home,1996,Pass,6.8,25071,movie,107,"Adventure,Drama,Family"
 1244,tt0029087,2,Knight Without Armor,1937,Fail,6.8,1294,movie,107,"Adventure,Drama,History"
@@ -3531,7 +3531,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9482,tt9770150,3,Nomadland,2020,Pass,7.3,146098,movie,107,Drama
 8327,tt2978462,3,Dolphin Tale 2,2014,Pass,6.4,9050,movie,107,"Drama,Family"
 7268,tt0097351,2,Field of Dreams,1989,Fail,7.5,116342,movie,107,"Drama,Family,Fantasy"
-5898,tt0012364,2,Körkarlen (The Phantom Carriage),1921,Fail,8.1,12112,movie,107,"Drama,Fantasy,Horror"
+5898,tt0012364,2,KÃ¶rkarlen (The Phantom Carriage),1921,Fail,8.1,12112,movie,107,"Drama,Fantasy,Horror"
 5722,tt1355630,3,If I Stay,2014,Pass,6.7,121243,movie,107,"Drama,Fantasy,Music"
 8872,tt0049762,3,Sissi - The Young Empress,1956,Pass,6.7,6500,movie,107,"Drama,History"
 8264,tt0040558,1,Macbeth,1948,Fail,7.5,7043,movie,107,"Drama,History,War"
@@ -3744,7 +3744,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9541,tt0149261,1,Deep Blue Sea,1999,Fail,5.9,131382,movie,105,"Action,Adventure,Sci-Fi"
 9551,tt2888046,1,Ip Man 3,2015,Fail,7.1,53940,movie,105,"Action,Biography,Drama"
 7727,tt2387499,3,Keeping Up with the Joneses,2016,Pass,5.9,61919,movie,105,"Action,Comedy"
-1771,tt1149361,3,Micmacs (Micmacs à tire-larigot),2009,Pass,7.2,30032,movie,105,"Action,Comedy,Crime"
+1771,tt1149361,3,Micmacs (Micmacs Ã  tire-larigot),2009,Pass,7.2,30032,movie,105,"Action,Comedy,Crime"
 5833,tt0099422,1,Dick Tracy,1991,Fail,6.1,60714,movie,105,"Action,Comedy,Crime"
 4290,tt0102266,3,"Last Boy Scout, The",1991,Pass,7,100136,movie,105,"Action,Comedy,Crime"
 1848,tt0086960,0,Beverly Hills Cop,1984,Fail,7.3,178330,movie,105,"Action,Comedy,Crime"
@@ -3761,7 +3761,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4908,tt2016940,3,Man of Tai Chi,2013,Pass,6.1,38170,movie,105,"Action,Drama"
 9942,tt3508840,2,"assassin, The",2015,Fail,6.3,16644,movie,105,"Action,Drama,History"
 2594,tt1318514,1,Rise of the Planet of the Apes,2011,Fail,7.5,515839,movie,105,"Action,Drama,Sci-Fi"
-6939,tt3616916,3,"Wave (Bølgen), The",2015,Pass,6.7,37020,movie,105,"Action,Drama,Thriller"
+6939,tt3616916,3,"Wave (BÃ¸lgen), The",2015,Pass,6.7,37020,movie,105,"Action,Drama,Thriller"
 5090,tt1205537,1,Jack Ryan: Shadow Recruit,2014,Fail,6.2,129542,movie,105,"Action,Drama,Thriller"
 3478,tt1611224,3,Abraham Lincoln: Vampire Hunter,2012,Pass,5.9,154373,movie,105,"Action,Fantasy,Horror"
 5339,tt0276816,0,Below,2002,Fail,6.2,22215,movie,105,"Action,Horror,Mystery"
@@ -3919,7 +3919,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9387,tt0074740,1,Keoma,1976,Fail,7.1,5501,movie,105,"Drama,Western"
 124,tt0162661,3,Sleepy Hollow,1999,Pass,7.3,349984,movie,105,"Fantasy,Horror,Mystery"
 9761,tt0066914,3,La nuit des etoiles filantes,1973,Pass,5,2434,movie,105,Horror
-7985,tt5862312,3,Verónica,2017,Pass,6.2,40063,movie,105,Horror
+7985,tt5862312,3,VerÃ³nica,2017,Pass,6.2,40063,movie,105,Horror
 9010,tt5791732,0,Il demone di Laplace,2017,Fail,6.5,303,movie,105,"Horror,Mystery,Sci-Fi"
 2803,tt0069019,2,Don't Torture a Duckling,1972,Fail,7.1,9163,movie,105,"Horror,Mystery,Thriller"
 829,tt1316037,3,Birdemic,2008,Pass,1.8,22957,movie,105,"Horror,Thriller"
@@ -3999,7 +3999,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6455,tt0230183,3,Eeny Meeny,2000,Pass,7,182,movie,104,"Comedy,Drama"
 1526,tt1479676,3,Cooking with Stella,2009,Pass,5.4,309,movie,104,"Comedy,Drama"
 5957,tt3334794,3,About a Girl,2014,Pass,6.6,815,movie,104,"Comedy,Drama"
-6138,tt2207050,2,Bicycling with Molière,2013,Fail,6.6,2949,movie,104,"Comedy,Drama"
+6138,tt2207050,2,Bicycling with MoliÃ¨re,2013,Fail,6.6,2949,movie,104,"Comedy,Drama"
 3879,tt0074152,3,Small Change,1976,Pass,7.7,5805,movie,104,"Comedy,Drama"
 9319,tt0117091,3,Mother,1996,Pass,6.9,6173,movie,104,"Comedy,Drama"
 3110,tt1340773,3,Elektra Luxx,2010,Pass,5.1,7240,movie,104,"Comedy,Drama"
@@ -4178,7 +4178,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1253,tt0058100,1,First Men in the Moon,1964,Fail,6.6,5663,movie,103,"Adventure,Sci-Fi"
 8030,tt4788934,3,Little Door Gods,2016,Pass,5.5,2073,movie,103,"Animation,Comedy,Family"
 6304,tt3398268,3,Omoide no Mani (When Marnie Was There),2014,Pass,7.7,38308,movie,103,"Animation,Drama,Family"
-700,tt0097814,3,Majo no takkyûbin (Kiki's Delivery Service),1989,Pass,7.9,137908,movie,103,"Animation,Family,Fantasy"
+700,tt0097814,3,Majo no takkyÃ»bin (Kiki's Delivery Service),1989,Pass,7.9,137908,movie,103,"Animation,Family,Fantasy"
 3689,tt1673697,3,"Sapphires, The",2012,Pass,7.1,14280,movie,103,"Biography,Comedy,Drama"
 970,tt0116594,3,I Shot Andy Warhol,1996,Pass,6.6,6723,movie,103,"Biography,Drama"
 6545,tt2752688,1,Rosewater,2014,Fail,6.6,10661,movie,103,"Biography,Drama"
@@ -4202,9 +4202,9 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 7302,tt0256524,3,"Curse of the Jade Scorpion, The",2001,Pass,6.7,40409,movie,103,"Comedy,Crime,Mystery"
 229,tt0373469,1,Kiss Kiss Bang Bang,2005,Fail,7.5,223877,movie,103,"Comedy,Crime,Mystery"
 2329,tt1311075,1,"Human Resources Manager, The",2010,Fail,6.6,1419,movie,103,"Comedy,Drama"
-4060,tt0959342,3,Se upp för dårarna,2007,Pass,5.2,2061,movie,103,"Comedy,Drama"
+4060,tt0959342,3,Se upp fÃ¶r dÃ¥rarna,2007,Pass,5.2,2061,movie,103,"Comedy,Drama"
 4103,tt1441956,3,West Is West,2010,Pass,6.4,3125,movie,103,"Comedy,Drama"
-8632,tt0240419,3,la ciénaga,2001,Pass,7.1,6501,movie,103,"Comedy,Drama"
+8632,tt0240419,3,la ciÃ©naga,2001,Pass,7.1,6501,movie,103,"Comedy,Drama"
 9456,tt10556022,3,Unpregnant,2020,Pass,6.4,7158,movie,103,"Comedy,Drama"
 796,tt0100024,3,Life Is Sweet,1990,Pass,7.5,10095,movie,103,"Comedy,Drama"
 7702,tt0113083,3,La flor de mi secreto,1995,Pass,7,11496,movie,103,"Comedy,Drama"
@@ -4266,7 +4266,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2082,tt1152397,3,American Violet,2008,Pass,7,2579,movie,103,Drama
 7485,tt5974388,3,Bar Bahar,2016,Pass,7.3,2780,movie,103,Drama
 2393,tt0182508,1,Urbania,2000,Fail,6.9,3061,movie,103,Drama
-8032,tt5096536,1,Réparer les vivants,2016,Fail,6.9,3247,movie,103,Drama
+8032,tt5096536,1,RÃ©parer les vivants,2016,Fail,6.9,3247,movie,103,Drama
 3347,tt1890373,3,Combat Girls,2011,Pass,6.8,4783,movie,103,Drama
 6742,tt2368749,3,Despues de Lucia,2012,Pass,7.1,6491,movie,103,Drama
 2055,tt1571724,0,Bal,2010,Fail,7.2,7059,movie,103,Drama
@@ -4274,7 +4274,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4165,tt2035630,3,Starlet,2012,Pass,6.9,7697,movie,103,Drama
 815,tt0092603,3,Babette's Feast,1987,Pass,7.8,19659,movie,103,Drama
 8591,tt7545524,3,Ben Is Back,2018,Pass,6.7,20828,movie,103,Drama
-7710,tt0118819,2,Carne trémula [Live Flesh],1997,Fail,7.4,30658,movie,103,Drama
+7710,tt0118819,2,Carne trÃ©mula [Live Flesh],1997,Fail,7.4,30658,movie,103,Drama
 8446,tt0111112,3,"Secret of Roan Inish, The",1994,Pass,7.5,9041,movie,103,"Drama,Family,Fantasy"
 9050,tt0217990,3,Alley Cats Strike,2000,Pass,6.1,2296,tvMovie,103,"Drama,Family,Sport"
 2142,tt0081414,1,Resurrection,1980,Fail,7.3,2952,movie,103,"Drama,Fantasy"
@@ -4603,7 +4603,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9357,tt8954732,3,"Princess Switch, The",2018,Pass,6.1,27410,movie,101,"Comedy,Drama,Family"
 899,tt0108037,0,"Sandlot, The",1993,Fail,7.8,87638,movie,101,"Comedy,Drama,Family"
 9007,tt1127877,1,Cold Souls,2009,Fail,6.5,9854,movie,101,"Comedy,Drama,Fantasy"
-5965,tt1883180,1,En duva satt på en gren och funderade på tillvaron,2014,Fail,7,18120,movie,101,"Comedy,Drama,Fantasy"
+5965,tt1883180,1,En duva satt pÃ¥ en gren och funderade pÃ¥ tillvaron,2014,Fail,7,18120,movie,101,"Comedy,Drama,Fantasy"
 4986,tt0096061,3,Scrooged,1988,Pass,7,98213,movie,101,"Comedy,Drama,Fantasy"
 114,tt0107048,2,Groundhog Day,1993,Fail,8,607531,movie,101,"Comedy,Drama,Fantasy"
 4560,tt0205873,3,"Dish, The",2000,Pass,7.2,16207,movie,101,"Comedy,Drama,History"
@@ -4653,7 +4653,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4025,tt1924429,0,Trance,2013,Fail,6.9,113048,movie,101,"Crime,Drama,Mystery"
 4859,tt0116260,3,Eye for an Eye,1996,Pass,6.2,16105,movie,101,"Crime,Drama,Thriller"
 7325,tt5153952,3,Let Me Go,2016,Pass,5.7,271,movie,101,Drama
-8033,tt0807965,1,La vie secrète des gens heureux,2006,Fail,6.4,288,movie,101,Drama
+8033,tt0807965,1,La vie secrÃ¨te des gens heureux,2006,Fail,6.4,288,movie,101,Drama
 2666,tt0120493,3,"Well, The",1997,Pass,6.1,414,movie,101,Drama
 4037,tt2287655,3,Bitchkram,2012,Pass,6,1000,movie,101,Drama
 4174,tt0102993,3,Strangers in Good Company,1990,Pass,7.7,1057,movie,101,Drama
@@ -4718,7 +4718,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 461,tt0382077,3,Hide and Seek,2005,Pass,6,84635,movie,101,"Horror,Mystery"
 4657,tt0119345,3,I Know What You Did Last Summer,1997,Pass,5.7,142785,movie,101,"Horror,Mystery"
 8978,tt4687108,1,In the Tall Grass,2019,Fail,5.4,53544,movie,101,"Horror,Mystery,Sci-Fi"
-5747,tt0422272,3,Frágiles (Fragile),2005,Pass,6.1,16441,movie,101,"Horror,Mystery,Thriller"
+5747,tt0422272,3,FrÃ¡giles (Fragile),2005,Pass,6.1,16441,movie,101,"Horror,Mystery,Thriller"
 7175,tt0084777,2,Tenebre,1982,Fail,7.1,22894,movie,101,"Horror,Mystery,Thriller"
 2489,tt1179891,2,My Bloody Valentine 3D,2009,Fail,5.4,56207,movie,101,"Horror,Mystery,Thriller"
 8824,tt0837563,3,Pet Sematary,2019,Pass,5.7,90169,movie,101,"Horror,Mystery,Thriller"
@@ -4845,13 +4845,13 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 7673,tt0063493,0,Reconstruction,1968,Fail,8,1555,movie,100,"Comedy,Drama"
 1482,tt1426362,1,Go get some rosemary,2009,Fail,6.9,2205,movie,100,"Comedy,Drama"
 5420,tt2108546,3,Jackie,2012,Pass,6.8,2226,movie,100,"Comedy,Drama"
-4613,tt0295671,1,L'uomo in più,2001,Fail,7.2,2861,movie,100,"Comedy,Drama"
+4613,tt0295671,1,L'uomo in piÃ¹,2001,Fail,7.2,2861,movie,100,"Comedy,Drama"
 6249,tt0122648,2,Hardboiled Egg,1997,Fail,7.2,3239,movie,100,"Comedy,Drama"
 7122,tt3655972,3,El Olivo,2016,Pass,6.8,3480,movie,100,"Comedy,Drama"
 3530,tt0023634,1,"I Was Born, But...",1932,Fail,8,5433,movie,100,"Comedy,Drama"
 2503,tt0362004,1,Palindromes,2004,Fail,6.7,12413,movie,100,"Comedy,Drama"
 3899,tt0875113,1,99 francs,2007,Fail,7.3,19557,movie,100,"Comedy,Drama"
-4723,tt0342492,1,De grønne slagtere ('Green Butchers'),2003,Fail,7.3,21851,movie,100,"Comedy,Drama"
+4723,tt0342492,1,De grÃ¸nne slagtere ('Green Butchers'),2003,Fail,7.3,21851,movie,100,"Comedy,Drama"
 8807,tt8637428,3,"Farewell, The",2019,Pass,7.6,61070,movie,100,"Comedy,Drama"
 760,tt0116493,3,Harriet the Spy,1996,Pass,5.9,10203,movie,100,"Comedy,Drama,Family"
 8930,tt0110006,0,Heavyweights,1995,Fail,6.7,27403,movie,100,"Comedy,Drama,Family"
@@ -4932,7 +4932,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3228,tt1764141,3,Cairo 678,2010,Pass,7.5,4333,movie,100,Drama
 2516,tt1100048,3,35 Shots of Rum,2008,Pass,7.1,4814,movie,100,Drama
 1501,tt0032811,3,"Mortal Storm, The",1940,Pass,7.8,5197,movie,100,Drama
-2439,tt1442519,3,Le hérisson,2009,Pass,7.4,9192,movie,100,Drama
+2439,tt1442519,3,Le hÃ©risson,2009,Pass,7.4,9192,movie,100,Drama
 2081,tt0252684,3,Manic,2001,Pass,7.2,9596,movie,100,Drama
 6646,tt2505294,3,Ask Me Anything,2014,Pass,6,12291,movie,100,Drama
 5526,tt2479800,3,Palo Alto,2013,Pass,6.2,28901,movie,100,Drama
@@ -5146,7 +5146,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 7662,tt4954522,3,Raw,2016,Pass,7,72605,movie,99,"Drama,Horror"
 7218,tt4361050,3,Ouija: Origin of Evil,2016,Pass,6.2,61078,movie,99,"Drama,Horror,Mystery"
 6552,tt2251281,1,Dark Was the Night,2014,Fail,5.6,10046,movie,99,"Drama,Horror,Thriller"
-515,tt0077711,3,Höstsonaten,1978,Pass,8.2,33208,movie,99,"Drama,Music"
+515,tt0077711,3,HÃ¶stsonaten,1978,Pass,8.2,33208,movie,99,"Drama,Music"
 3445,tt1800741,3,Step Up Revolution,2012,Pass,6.4,55680,movie,99,"Drama,Music,Romance"
 7167,tt4326444,3,Julieta,2016,Pass,7.1,31083,movie,99,"Drama,Mystery,Romance"
 4784,tt0307479,1,Solaris,2002,Fail,6.2,81895,movie,99,"Drama,Mystery,Romance"
@@ -5170,7 +5170,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1857,tt0076786,3,Suspiria,1977,Pass,7.4,89857,movie,99,Horror
 1398,tt1029234,3,Martyrs,2008,Pass,7.1,90575,movie,99,Horror
 654,tt1127180,3,Drag Me to Hell,2009,Pass,6.5,197732,movie,99,Horror
-4863,tt0235712,3,Ring 0: Birthday (Ringu 0: Bâsudei),2000,Pass,6,9012,movie,99,"Horror,Mystery,Thriller"
+4863,tt0235712,3,Ring 0: Birthday (Ringu 0: BÃ¢sudei),2000,Pass,6,9012,movie,99,"Horror,Mystery,Thriller"
 6459,tt3086442,0,"Ich seh, Ich seh",2014,Fail,6.7,50120,movie,99,"Horror,Mystery,Thriller"
 8758,tt7958736,3,Ma,2019,Pass,5.6,51401,movie,99,"Horror,Mystery,Thriller"
 4649,tt0146336,3,Urban Legend,1998,Pass,5.6,65044,movie,99,"Horror,Mystery,Thriller"
@@ -5229,7 +5229,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3,tt0910970,1,WALL-E,2008,Fail,8.4,1071033,movie,98,"Adventure,Animation,Family"
 4924,tt2332579,3,Crystal Fairy & the Magical Cactus and 2012,2013,Pass,5.8,8081,movie,98,"Adventure,Comedy,Drama"
 804,tt1176740,3,Away We Go,2009,Pass,7,53248,movie,98,"Adventure,Comedy,Drama"
-10078,tt0943232,3,Hände weg von Mississippi,2007,Pass,6.4,365,movie,98,"Adventure,Comedy,Family"
+10078,tt0943232,3,HÃ¤nde weg von Mississippi,2007,Pass,6.4,365,movie,98,"Adventure,Comedy,Family"
 1602,tt0106611,1,Cool Runnings,1993,Fail,7,101479,movie,98,"Adventure,Comedy,Family"
 8236,tt2692250,1,Night at the Museum: Secret of the Tomb,2014,Fail,6.2,117647,movie,98,"Adventure,Comedy,Family"
 2157,tt0062711,3,Barbarella,1968,Pass,5.9,34388,movie,98,"Adventure,Comedy,Fantasy"
@@ -5813,7 +5813,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 5998,tt0046345,3,Summer with Monika,1953,Pass,7.5,14109,movie,96,"Drama,Romance"
 5388,tt1702014,3,Hoje Eu Quero Voltar Sozinho,2014,Pass,7.9,24722,movie,96,"Drama,Romance"
 3232,tt0118845,0,Chun gwong cha sit (Happy Together),1997,Fail,7.7,27426,movie,96,"Drama,Romance"
-2196,tt1424797,2,J'ai tué ma mère,2009,Fail,7.5,29444,movie,96,"Drama,Romance"
+2196,tt1424797,2,J'ai tuÃ© ma mÃ¨re,2009,Fail,7.5,29444,movie,96,"Drama,Romance"
 7670,tt5001718,3,"Everything, Everything",2017,Pass,6.4,37354,movie,96,"Drama,Romance"
 2932,tt0473074,3,"Gymnast, The",2006,Pass,6.3,2185,movie,96,"Drama,Romance,Sport"
 6693,tt2084989,0,Upstream Color,2013,Fail,6.7,33160,movie,96,"Drama,Sci-Fi"
@@ -5851,7 +5851,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1004,tt1593655,3,Browncoats: Redemption,2010,Pass,5,143,movie,96,Sci-Fi
 2374,tt0233657,1,Epoch,2001,Fail,4.9,2403,tvMovie,96,"Sci-Fi,Thriller"
 4329,tt1258972,1,"Man with the Iron Fists, The",2012,Fail,5.4,62183,movie,95,Action
-8513,tt1226251,3,Pokémon: The Rise of Darkrai,2007,Pass,6.5,3389,movie,95,"Action,Adventure,Animation"
+8513,tt1226251,3,PokÃ©mon: The Rise of Darkrai,2007,Pass,6.5,3389,movie,95,"Action,Adventure,Animation"
 5006,tt0181739,3,Osmosis Jones,2001,Pass,6.3,35381,movie,95,"Action,Adventure,Animation"
 1085,tt0230011,1,Atlantis: The Lost Empire,2001,Fail,6.9,114529,movie,95,"Action,Adventure,Animation"
 6808,tt2267968,3,Kung Fu Panda 3,2016,Pass,7.1,150024,movie,95,"Action,Adventure,Animation"
@@ -5890,7 +5890,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2536,tt1034032,1,Gamer,2009,Fail,5.8,133720,movie,95,"Action,Sci-Fi,Thriller"
 7055,tt0106303,1,Arctic Blue,1993,Fail,5.1,1042,movie,95,"Action,Thriller"
 2174,tt0471041,0,Tournament,2009,Fail,6.1,34935,movie,95,"Action,Thriller"
-5932,tt0117876,3,Tenchi Muyô! In Love,1996,Pass,7.2,1419,movie,95,"Adventure,Animation,Comedy"
+5932,tt0117876,3,Tenchi MuyÃ´! In Love,1996,Pass,7.2,1419,movie,95,"Adventure,Animation,Comedy"
 9320,tt7488208,3,Over the Moon,2020,Pass,6.4,20994,movie,95,"Adventure,Animation,Comedy"
 2201,tt1411704,2,Hop,2011,Fail,5.4,33406,movie,95,"Adventure,Animation,Comedy"
 9402,tt2850386,3,"Croods: A New Age, The",2020,Pass,7,38778,movie,95,"Adventure,Animation,Comedy"
@@ -5929,7 +5929,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2734,tt1675439,2,Lloyd the Conqueror,2011,Fail,5.9,354,movie,95,Comedy
 9722,tt0088459,1,Zwei Nasen tanken Super,1984,Fail,4.5,948,movie,95,Comedy
 10069,tt0112386,1,Les apprentis,1995,Fail,7,1059,movie,95,Comedy
-9586,tt0338828,1,Mais qui a tué Pamela Rose?,2003,Fail,6,2616,movie,95,Comedy
+9586,tt0338828,1,Mais qui a tuÃ© Pamela Rose?,2003,Fail,6,2616,movie,95,Comedy
 8939,tt1793931,3,Les Tuche,2011,Pass,5.4,3322,movie,95,Comedy
 5349,tt3097084,3,Camp Takota,2014,Pass,6.8,4557,movie,95,Comedy
 9219,tt6511932,1,"Beach Bum, The",2019,Fail,5.5,21374,movie,95,Comedy
@@ -5949,7 +5949,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3248,tt0075617,1,ABBA: The Movie,1977,Fail,6.4,3381,movie,95,"Comedy,Documentary,Drama"
 564,tt0073076,3,Grey Gardens,1975,Pass,7.6,13416,movie,95,"Comedy,Documentary,Drama"
 7887,tt3887208,3,"Mad Ones, The",2017,Pass,6.2,96,movie,95,"Comedy,Drama"
-9246,tt6275840,3,"António Um, Dois, Três",2017,Pass,6.3,251,movie,95,"Comedy,Drama"
+9246,tt6275840,3,"AntÃ³nio Um, Dois, TrÃªs",2017,Pass,6.3,251,movie,95,"Comedy,Drama"
 6725,tt1316624,3,"Year Dolly Parton Was My Mom, The",2011,Pass,6.3,584,movie,95,"Comedy,Drama"
 1548,tt1216477,3,Dim Sum Funeral,2008,Pass,5.3,658,movie,95,"Comedy,Drama"
 4757,tt0896986,1,La torre de Suso,2007,Fail,6.5,887,movie,95,"Comedy,Drama"
@@ -6027,14 +6027,14 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9803,tt0485851,3,"Air I Breathe, The",2007,Pass,6.8,34067,movie,95,"Crime,Drama,Thriller"
 2389,tt0059764,3,A Study in Terror,1965,Pass,6.5,2047,movie,95,"Crime,Mystery,Thriller"
 5768,tt2093109,3,Escape Fire: The Fight to Rescue American Healthcare,2012,Pass,7.3,536,movie,95,"Documentary,News"
-5992,tt3521332,3,rastres de sándal,2013,Pass,6.6,428,movie,95,Drama
+5992,tt3521332,3,rastres de sÃ¡ndal,2013,Pass,6.6,428,movie,95,Drama
 9261,tt3977428,3,John From,2015,Pass,6.4,493,movie,95,Drama
 9363,tt0360779,3,Marseille,2004,Pass,6.4,662,movie,95,Drama
 2216,tt0102829,3,Salmonberries,1991,Pass,6.2,687,movie,95,Drama
 6160,tt0142964,1,Vildspor,1998,Fail,6.5,696,movie,95,Drama
 7262,tt0048512,0,"Prisoner, The",1955,Fail,6.9,986,movie,95,Drama
 6323,tt2293276,3,"Making of a Lady, The",2012,Pass,6.7,1323,tvMovie,95,Drama
-1572,tt0051964,3,Mädchen in Uniform,1958,Pass,7,1513,movie,95,Drama
+1572,tt0051964,3,MÃ¤dchen in Uniform,1958,Pass,7,1513,movie,95,Drama
 6752,tt4093680,3,Min lilla syster,2015,Pass,6.7,1623,movie,95,Drama
 9117,tt5322168,3,Snapshots,2018,Pass,7,1915,movie,95,Drama
 2844,tt0303830,3,Casa de los babys,2003,Pass,6.4,2141,movie,95,Drama
@@ -6213,11 +6213,11 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2952,tt1625346,3,Young Adult,2011,Pass,6.3,83472,movie,94,"Comedy,Drama"
 7843,tt4925292,3,Lady Bird,2017,Pass,7.4,273718,movie,94,"Comedy,Drama"
 3090,tt0112435,3,"Baby-Sitters Club, The",1995,Pass,5.8,5751,movie,94,"Comedy,Drama,Family"
-3525,tt0053134,3,Good Morning (Ohayô),1959,Pass,7.9,9208,movie,94,"Comedy,Drama,Family"
+3525,tt0053134,3,Good Morning (OhayÃ´),1959,Pass,7.9,9208,movie,94,"Comedy,Drama,Family"
 8970,tt2404465,3,Troop Zero,2019,Pass,6.9,10530,movie,94,"Comedy,Drama,Family"
 6347,tt1055366,3,Camp Rock,2008,Pass,5.3,32919,tvMovie,94,"Comedy,Drama,Family"
 1175,tt1425933,3,Skeletons,2010,Pass,6.8,1986,movie,94,"Comedy,Drama,Fantasy"
-6656,tt0100557,3,"Nasty Girl (Das schreckliche Mädchen), The",1990,Pass,7.3,2574,movie,94,"Comedy,Drama,History"
+6656,tt0100557,3,"Nasty Girl (Das schreckliche MÃ¤dchen), The",1990,Pass,7.3,2574,movie,94,"Comedy,Drama,History"
 5030,tt0423382,3,Tjenare kungen,2005,Pass,6.1,3296,movie,94,"Comedy,Drama,Music"
 9331,tt0105488,1,Strictly Ballroom,1992,Fail,7.2,26856,movie,94,"Comedy,Drama,Music"
 6252,tt2474024,1,"Last Five Years, The",2014,Fail,5.9,10059,movie,94,"Comedy,Drama,Musical"
@@ -6270,7 +6270,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 2951,tt1345772,3,"Clinic, The",2010,Pass,5.4,6393,movie,94,"Crime,Horror,Mystery"
 2256,tt0040214,1,Casbah,1948,Fail,6,487,movie,94,"Crime,Musical"
 10011,tt0492506,3,Wordplay,2006,Pass,7.4,3670,movie,94,Documentary
-7721,tt4322180,1,L'età d'oro,2016,Fail,5.4,29,movie,94,Drama
+7721,tt4322180,1,L'etÃ  d'oro,2016,Fail,5.4,29,movie,94,Drama
 7405,tt0073518,1,Pascual Duarte,1976,Fail,6.3,220,movie,94,Drama
 6525,tt1504508,3,Yelling to the Sky,2011,Pass,5.9,853,movie,94,Drama
 9210,tt3319018,3,My Name Is Emily,2015,Pass,6.6,1063,movie,94,Drama
@@ -6470,7 +6470,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9882,tt10342730,3,Spiral: From the Book of Saw,2021,Pass,5.2,45597,movie,93,"Crime,Drama,Horror"
 8487,tt5795086,3,Gemini,2017,Pass,5.4,4936,movie,93,"Crime,Drama,Mystery"
 6860,tt1706598,3,Every Secret Thing,2014,Pass,6.1,7660,movie,93,"Crime,Drama,Mystery"
-8098,tt0031514,2,Le jour se lève,1939,Fail,7.7,7518,movie,93,"Crime,Drama,Romance"
+8098,tt0031514,2,Le jour se lÃ¨ve,1939,Fail,7.7,7518,movie,93,"Crime,Drama,Romance"
 7032,tt0109699,3,Dias contados,1994,Pass,6.6,2049,movie,93,"Crime,Drama,Thriller"
 6784,tt1661820,3,Cut Bank,2014,Pass,6.1,12355,movie,93,"Crime,Drama,Thriller"
 4695,tt0288439,1,Bang Bang You're Dead,2002,Fail,7.8,12718,movie,93,"Crime,Drama,Thriller"
@@ -6681,7 +6681,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3890,tt0035753,3,Le Corbeau: The Raven,1943,Pass,7.9,9764,movie,92,"Crime,Drama,Mystery"
 7078,tt0891527,0,Lions for lambs,2007,Fail,6.2,49405,movie,92,"Crime,Drama,Mystery"
 2498,tt0465551,3,Notes on a Scandal,2006,Pass,7.4,77568,movie,92,"Crime,Drama,Romance"
-2870,tt1900856,3,Coup d'éclat,2011,Pass,5.4,168,movie,92,"Crime,Drama,Thriller"
+2870,tt1900856,3,Coup d'Ã©clat,2011,Pass,5.4,168,movie,92,"Crime,Drama,Thriller"
 7884,tt3348730,3,Jigsaw,2017,Pass,5.8,76757,movie,92,"Crime,Horror,Mystery"
 9291,tt1132626,3,Saw V,2008,Pass,5.8,122358,movie,92,"Crime,Horror,Mystery"
 3804,tt1270296,3,"Killing Jar, The",2010,Pass,5.8,2709,movie,92,"Crime,Mystery,Thriller"
@@ -6884,7 +6884,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3442,tt0053428,3,Come Dance with Me!,1959,Pass,6.3,628,movie,91,"Crime,Drama,Mystery"
 4724,tt0445620,1,Paradise Now,2005,Fail,7.4,23039,movie,91,"Crime,Drama,Thriller"
 8553,tt2292794,0,Bebukottak,1985,Fail,7.9,304,movie,91,Documentary
-3800,tt0013257,3,Häxan: Witchcraft Through the Ages,1922,Pass,7.7,13917,movie,91,"Documentary,Fantasy,History"
+3800,tt0013257,3,HÃ¤xan: Witchcraft Through the Ages,1922,Pass,7.7,13917,movie,91,"Documentary,Fantasy,History"
 8686,tt0130141,3,"Cat Has Nine Lives, The",1968,Pass,6.1,104,movie,91,Drama
 5851,tt0282753,1,Spacked out,2000,Fail,6.6,128,movie,91,Drama
 2607,tt1822304,1,Sleeping Sickness (Schlafkrankheit),2011,Fail,6.2,671,movie,91,Drama
@@ -6893,7 +6893,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 3957,tt0855805,0,Farval Falkenberg,2006,Fail,6.5,2792,movie,91,Drama
 5541,tt1464191,3,Decoding Annie Parker,2013,Pass,6.2,3162,movie,91,Drama
 2203,tt1095442,1,Goodbye Solo,2008,Fail,7.3,5847,movie,91,Drama
-6279,tt4428814,1,La loi du marché,2015,Fail,6.8,6112,movie,91,Drama
+6279,tt4428814,1,La loi du marchÃ©,2015,Fail,6.8,6112,movie,91,Drama
 7275,tt3365778,3,Respire,2014,Pass,7.1,7279,movie,91,Drama
 6892,tt2304426,1,"Selfish Giant, The",2013,Fail,7.3,12072,movie,91,Drama
 8598,tt6257174,3,"Miseducation of Cameron Post, The",2018,Pass,6.6,21404,movie,91,Drama
@@ -6926,7 +6926,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 7716,tt1931602,3,Very Good Girls,2013,Pass,6,15130,movie,91,"Drama,Romance"
 2790,tt1498569,3,Restless,2011,Pass,6.7,17802,movie,91,"Drama,Romance"
 7072,tt3544082,3,45 Years,2015,Pass,7.1,32691,movie,91,"Drama,Romance"
-2520,tt0050986,2,Smultronstället (Wild Strawberries),1957,Fail,8.2,104663,movie,91,"Drama,Romance"
+2520,tt0050986,2,SmultronstÃ¤llet (Wild Strawberries),1957,Fail,8.2,104663,movie,91,"Drama,Romance"
 5477,tt1900854,0,Comes a Bright Day,2012,Fail,6.1,1660,movie,91,"Drama,Romance,Thriller"
 10169,tt0210044,2,Flowers for Algernon,2000,Fail,6.7,1671,tvMovie,91,"Drama,Sci-Fi"
 3272,tt1700808,3,Fast Girls,2012,Pass,6.2,3611,movie,91,"Drama,Sport"
@@ -7082,8 +7082,8 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6261,tt3707396,3,Hedi Schneider steckt fest,2015,Pass,6.4,403,movie,90,"Comedy,Drama"
 977,tt0116418,3,Girls Town,1996,Pass,6.4,786,movie,90,"Comedy,Drama"
 5707,tt2288044,3,300 Worte Deutsch,2013,Pass,5.6,797,movie,90,"Comedy,Drama"
-5408,tt2536428,3,La crème de la crème,2014,Pass,5.9,1364,movie,90,"Comedy,Drama"
-9584,tt0087681,1,Marche à l'ombre,1984,Fail,6.6,1423,movie,90,"Comedy,Drama"
+5408,tt2536428,3,La crÃ¨me de la crÃ¨me,2014,Pass,5.9,1364,movie,90,"Comedy,Drama"
+9584,tt0087681,1,Marche Ã  l'ombre,1984,Fail,6.6,1423,movie,90,"Comedy,Drama"
 7075,tt0441761,3,Free Zone,2005,Pass,5.7,2880,movie,90,"Comedy,Drama"
 4337,tt0107214,0,Indien,1993,Fail,7.9,2938,movie,90,"Comedy,Drama"
 7335,tt4145304,3,Unexpected,2015,Pass,5.7,3153,movie,90,"Comedy,Drama"
@@ -7391,7 +7391,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6665,tt1870548,3,This changes everything,2015,Pass,6.5,603,movie,89,Documentary
 4680,tt0145937,0,Naqoyqatsi,2002,Fail,6.6,5819,movie,89,"Documentary,Music"
 2635,tt1521783,2,Exit 117,2009,Fail,8,26,movie,89,Drama
-6716,tt3757648,1,Tempête,2015,Fail,6.6,118,movie,89,Drama
+6716,tt3757648,1,TempÃªte,2015,Fail,6.6,118,movie,89,Drama
 5288,tt0476013,3,"Hello Sister, Goodbye Life",2006,Pass,6.2,1220,tvMovie,89,Drama
 5691,tt1143155,3,Treeless Mountain,2008,Pass,7,1765,movie,89,Drama
 4158,tt0889600,3,Fat Like Me,2007,Pass,5.7,2602,tvMovie,89,Drama
@@ -7588,7 +7588,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1618,tt1653853,3,Into Our Own Hands,2010,Pass,7.1,70,movie,88,"Documentary,Musical"
 8517,tt5861756,3,Bella Ciao!,2018,Pass,6.8,9,movie,88,Drama
 6156,tt4247740,3,"Three Es, The",2015,Pass,7.6,34,movie,88,Drama
-1745,tt0305589,3,Froid comme l'été (Cold as Summer),2002,Pass,7.2,167,tvMovie,88,Drama
+1745,tt0305589,3,Froid comme l'Ã©tÃ© (Cold as Summer),2002,Pass,7.2,167,tvMovie,88,Drama
 8354,tt0039112,3,"Years Between, The",1946,Pass,6.8,177,movie,88,Drama
 5789,tt0094286,3,Waiting for the Moon,1987,Pass,6.4,196,movie,88,Drama
 3828,tt0059607,3,"Pleasure Girls, The",1965,Pass,6,212,movie,88,Drama
@@ -7610,7 +7610,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6260,tt4265878,3,Dora oder Die sexuellen Neurosen unserer Eltern,2015,Pass,6.4,486,movie,88,"Drama,Romance"
 1960,tt0015498,0,Wild Oranges,1924,Fail,6.8,508,movie,88,"Drama,Romance"
 7132,tt4341864,2,La memoria del agua,2015,Fail,6.1,752,movie,88,"Drama,Romance"
-628,tt0022183,3,Mädchen in Uniform,1931,Pass,7.6,3027,movie,88,"Drama,Romance"
+628,tt0022183,3,MÃ¤dchen in Uniform,1931,Pass,7.6,3027,movie,88,"Drama,Romance"
 9038,tt0031593,3,Love Affair,1939,Pass,7.4,5207,movie,88,"Drama,Romance"
 7134,tt0231844,2,Juste une question d'amour,2000,Fail,7.7,5752,tvMovie,88,"Drama,Romance"
 1289,tt0035015,2,"Magnificent Ambersons, The",1942,Fail,7.7,24409,movie,88,"Drama,Romance"
@@ -7663,7 +7663,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6529,tt0087344,0,Godzilla 1985,1984,Fail,6.2,6368,movie,87,"Action,Sci-Fi,Thriller"
 4246,tt0267804,0,"One, The",2001,Fail,5.9,91151,movie,87,"Action,Sci-Fi,Thriller"
 4207,tt1478804,1,Four Assassins,2012,Fail,3.6,656,movie,87,"Action,Thriller"
-10189,tt8001346,2,Astérix: Le secret de la potion magique (Asterix: The Secret of the Magic Potion),2018,Fail,6.7,9347,movie,87,"Adventure,Animation,Comedy"
+10189,tt8001346,2,AstÃ©rix: Le secret de la potion magique (Asterix: The Secret of the Magic Potion),2018,Fail,6.7,9347,movie,87,"Adventure,Animation,Comedy"
 2911,tt0844993,3,Hoodwinked Too! Hood vs. Evil,2011,Pass,4.7,12916,movie,87,"Adventure,Animation,Comedy"
 2948,tt1615918,3,Alvin and the Chipmunks: Chipwrecked,2011,Pass,4.4,34365,movie,87,"Adventure,Animation,Comedy"
 7180,tt4624424,1,Storks,2016,Fail,6.8,60763,movie,87,"Adventure,Animation,Comedy"
@@ -8146,7 +8146,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 581,tt0098105,1,Police Academy 6: City Under Siege,1989,Fail,4.4,30861,movie,84,"Comedy,Crime"
 7994,tt7401540,3,Disco,2017,Pass,6.5,42,movie,84,"Comedy,Drama"
 4072,tt2357263,3,Pasadena,2013,Pass,4.6,232,movie,84,"Comedy,Drama"
-4489,tt2009643,0,á annan veg,2011,Fail,6.6,612,movie,84,"Comedy,Drama"
+4489,tt2009643,0,Ã¡ annan veg,2011,Fail,6.6,612,movie,84,"Comedy,Drama"
 6617,tt0950740,3,Grandpa for Christmas,2007,Pass,6.9,1219,tvMovie,84,"Comedy,Drama"
 3639,tt1650058,3,"Perfect Family, The",2011,Pass,5.7,1533,movie,84,"Comedy,Drama"
 5637,tt2235902,3,Geography Club,2013,Pass,6.6,5793,movie,84,"Comedy,Drama"
@@ -8213,7 +8213,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6564,tt0073373,1,Terror of Mechagodzilla,1975,Fail,6.2,4861,movie,83,"Action,Adventure,Family"
 9741,tt0086340,3,Sorceress,1982,Pass,4.4,2167,movie,83,"Action,Adventure,Fantasy"
 3693,tt1260502,3,Ghost in the Shell 2.0,2008,Pass,8,14353,movie,83,"Action,Animation,Crime"
-659,tt0113568,0,Kôkaku kidôtai (Ghost in the Shell),1995,Fail,8,138906,movie,83,"Action,Animation,Crime"
+659,tt0113568,0,KÃ´kaku kidÃ´tai (Ghost in the Shell),1995,Fail,8,138906,movie,83,"Action,Animation,Crime"
 3649,tt0059170,3,"Faster, Pussycat! Kill! Kill!",1965,Pass,6.7,14710,movie,83,"Action,Comedy"
 2618,tt1622547,1,30 Minutes or Less,2011,Fail,6.1,98928,movie,83,"Action,Comedy,Crime"
 3425,tt1194424,1,Denizen,2010,Fail,5.4,92,movie,83,"Action,Horror,Sci-Fi"
@@ -8309,7 +8309,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 6055,tt0048127,2,Godzilla Raids Again,1955,Fail,5.8,6670,movie,82,"Action,Sci-Fi"
 4973,tt0107875,3,"Princess and the Goblin, The",1991,Pass,6.8,2748,movie,82,"Adventure,Animation,Comedy"
 7187,tt0265632,3,Recess: School's Out,2001,Pass,6.6,10389,movie,82,"Adventure,Animation,Comedy"
-2530,tt0072901,1,Les Douze Travaux d'Astérix (the Twelve Tasks of Asterix),1976,Fail,7.7,16781,movie,82,"Adventure,Animation,Comedy"
+2530,tt0072901,1,Les Douze Travaux d'AstÃ©rix (the Twelve Tasks of Asterix),1976,Fail,7.7,16781,movie,82,"Adventure,Animation,Comedy"
 1510,tt0084649,3,"Secret of NIMH, The",1982,Pass,7.6,40326,movie,82,"Adventure,Animation,Drama"
 7188,tt0130623,3,Dinosaur,2000,Pass,6.5,58717,movie,82,"Adventure,Animation,Drama"
 6709,tt2555268,3,Maidentrip,2013,Pass,7.5,3837,movie,82,"Adventure,Biography,Documentary"
@@ -8405,7 +8405,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 8096,tt5829040,3,Fun Mom Dinner,2017,Pass,5.3,5515,movie,81,Comedy
 3521,tt2077851,2,Sleepwalk With Me,2012,Fail,6.8,11870,movie,81,Comedy
 5139,tt1366344,3,"Sitter, The",2011,Pass,5.7,70284,movie,81,Comedy
-480,tt0889583,0,Brüno,2009,Fail,5.8,147857,movie,81,Comedy
+480,tt0889583,0,BrÃ¼no,2009,Fail,5.8,147857,movie,81,Comedy
 8624,tt0186589,3,Sugar & Spice,2001,Pass,5.7,14167,movie,81,"Comedy,Crime"
 9685,tt0421051,1,Daniel the Wizard,2004,Fail,1.7,14294,movie,81,"Comedy,Crime,Fantasy"
 992,tt1133993,2,Serious Moonlight,2009,Fail,5.4,8336,movie,81,"Comedy,Crime,Romance"
@@ -8526,7 +8526,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 10117,tt0102915,3,Showdown in Little Tokyo,1991,Pass,6.2,18376,movie,79,"Action,Comedy,Crime"
 6043,tt0021079,1,Little Caesar,1931,Fail,7.2,13092,movie,79,"Action,Crime,Drama"
 6300,tt3058674,1,VANish,2015,Fail,5.1,1736,movie,79,"Action,Crime,Horror"
-2531,tt0088748,0,Astérix et la Surprise de Céasar (Asterix vs. Caesar),1985,Fail,6.8,9484,movie,79,"Adventure,Animation,Comedy"
+2531,tt0088748,0,AstÃ©rix et la Surprise de CÃ©asar (Asterix vs. Caesar),1985,Fail,6.8,9484,movie,79,"Adventure,Animation,Comedy"
 4966,tt0090667,0,Asterix in Britain (Asterix chez les Bretons),1986,Fail,7.1,11440,movie,79,"Adventure,Animation,Comedy"
 5794,tt0134067,3,"Rugrats Movie, The",1998,Pass,5.9,19131,movie,79,"Adventure,Animation,Comedy"
 759,tt0279967,3,Mulan II,2004,Pass,5.7,25340,video,79,"Adventure,Animation,Comedy"
@@ -8648,7 +8648,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 1420,tt0390384,1,Primer,2004,Fail,6.9,104577,movie,77,"Drama,Sci-Fi,Thriller"
 4410,tt0051755,1,I Bury the Living,1958,Fail,6.3,2836,movie,77,Horror
 3105,tt0084695,3,"Slumber Party Massacre, The",1982,Pass,5.7,13958,movie,77,Horror
-7293,tt0430164,3,Películas para no dormir: La habitación del niño,2006,Pass,6.9,5463,tvMovie,77,"Horror,Mystery,Thriller"
+7293,tt0430164,3,PelÃ­culas para no dormir: La habitaciÃ³n del niÃ±o,2006,Pass,6.9,5463,tvMovie,77,"Horror,Mystery,Thriller"
 3618,tt0083959,3,Forbidden World,1982,Pass,5.2,5132,movie,77,"Horror,Sci-Fi"
 9348,tt8712750,3,A.M.I.,2019,Pass,3.9,1857,movie,77,"Horror,Thriller"
 7880,tt2428170,0,Creep,2014,Fail,6.4,50940,movie,77,"Horror,Thriller"
@@ -8843,7 +8843,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 8090,tt0036341,3,"Seventh Victim, The",1943,Pass,6.8,6659,movie,71,"Drama,Horror,Mystery"
 6748,tt0411705,0,9 Songs,2004,Fail,4.8,22386,movie,71,"Drama,Music,Romance"
 7528,tt0023775,3,Baby Face,1933,Pass,7.6,6862,movie,71,"Drama,Romance"
-5179,tt0330312,0,Gakkô no kaidan G,1988,Fail,7.1,327,tvMovie,71,Horror
+5179,tt0330312,0,GakkÃ´ no kaidan G,1988,Fail,7.1,327,tvMovie,71,Horror
 4407,tt0055902,2,"Devil's Hand, The",1962,Fail,4.7,1233,movie,71,Horror
 7450,tt0024184,1,"Invisible Man, The",1933,Fail,7.7,34001,movie,71,"Horror,Sci-Fi"
 1349,tt0000574,1,"Story of the Kelly Gang, The",1906,Fail,6.1,753,movie,70,"Action,Adventure,Biography"
@@ -8968,14 +8968,14 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 4057,tt0060174,2,Blood Bath,1966,Fail,5.2,914,movie,62,Horror
 2556,tt0032215,3,"Ape, The",1940,Pass,4.7,1829,movie,62,Horror
 5802,tt0032690,3,"Last Alarm, The",1940,Pass,5.7,200,movie,61,"Action,Adventure,Crime"
-3330,tt0106417,3,Gekijô-ban - Bishôjo senshi Sêrâ Mûn R (Sailor Moon R the Movie: The Promise of the Rose),1993,Pass,7.7,2545,movie,61,"Action,Animation,Comedy"
+3330,tt0106417,3,GekijÃ´-ban - BishÃ´jo senshi SÃªrÃ¢ MÃ»n R (Sailor Moon R the Movie: The Promise of the Rose),1993,Pass,7.7,2545,movie,61,"Action,Animation,Comedy"
 8325,tt5563932,3,Thomas & Friends: The Great Race,2016,Pass,5.9,276,movie,61,"Adventure,Animation,Comedy"
 4559,tt0050998,3,Sorority Girl,1957,Pass,5.4,349,movie,61,Drama
 7672,tt3391348,3,"3Tails Movie: A Mermaid Adventure, The",2015,Pass,3.3,185,movie,61,Family
 5923,tt1422675,3,Ju-on: White Ghost,2009,Pass,5.9,2185,movie,61,"Fantasy,Horror"
 5908,tt0142233,1,Dragon Ball Z: The Movie - The Tree of Might,1990,Fail,6.9,7526,movie,60,"Action,Adventure,Animation"
 3332,tt0112513,3,"Sailor Moon SuperS the Movie, The Ten Senshi Unite, Mystery of the Black Dream Hole (Sailor Moon Super S the Movie: Black Dream",1995,Pass,7.5,1603,movie,60,"Action,Animation,Comedy"
-3331,tt0109277,3,Gekijô-ban - Bishôjo senshi Sêrâ Mûn S (Sailor Moon S the Movie: Hearts in Ice),1994,Pass,7.7,1992,movie,60,"Action,Animation,Comedy"
+3331,tt0109277,3,GekijÃ´-ban - BishÃ´jo senshi SÃªrÃ¢ MÃ»n S (Sailor Moon S the Movie: Hearts in Ice),1994,Pass,7.7,1992,movie,60,"Action,Animation,Comedy"
 1727,tt0249577,1,Here Comes Peter Cotton Tail,1971,Fail,7.5,1257,tvMovie,60,"Adventure,Animation,Comedy"
 5395,tt0466405,3,Gekijoban XXXHolic Manatsu no yoru no yume,2005,Pass,7.2,653,movie,60,"Animation,Comedy,Drama"
 7337,tt5526028,0,Doukyuusei,2016,Fail,7.8,2363,movie,60,"Animation,Drama,Music"
@@ -9043,7 +9043,7 @@ bechdel_id,imdb_id,bechdel_rating,title,year,passed,imdb_rating,num_votes,type,r
 9920,tt1180329,0,Antoine and Colette,1962,Fail,7.6,5112,short,32,"Comedy,Drama,Romance"
 6278,tt3472226,2,Kung Fury,2015,Fail,8,58675,short,31,"Action,Comedy,Fantasy"
 5198,tt0078503,3,Within the Woods,1978,Pass,6.5,2353,short,31,"Horror,Short"
-5593,tt1517470,0,Doragon bôru Z: Atsumare! Gokû Wârudo,1992,Fail,7,470,video,30,"Action,Adventure,Animation"
+5593,tt1517470,0,Doragon bÃ´ru Z: Atsumare! GokÃ» WÃ¢rudo,1992,Fail,7,470,video,30,"Action,Adventure,Animation"
 6213,tt1263772,3,XXXHOLic: Shunmuki - Zenpen,2009,Pass,7.8,152,video,30,"Animation,Drama,Mystery"
 9993,tt0049095,3,Le coup du berger,1956,Pass,7.1,925,short,28,"Comedy,Romance,Short"
 9178,tt1772398,3,"Strange Thing About the Johnsons, The",2011,Pass,7.2,5022,short,28,"Drama,Horror,Short"
