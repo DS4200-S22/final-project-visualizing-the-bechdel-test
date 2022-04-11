@@ -36,11 +36,12 @@ h3 {
 }
 
 .flex-container {
-	min-width: 25px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
+  min-width: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
  .checkboxes {
   margin: 4px;
