@@ -141,8 +141,9 @@ const tooltip = d3.select("#stackedbar-chart")
   const mouseover = function(event, d) {
     const subgroupName = d3.select(this.parentNode).datum().key;
     const subgroupValue = d.data[subgroupName];
+    const subgroupGenre = d.data[genreCounts];
     tooltip
-        .html("subgroup: " + subgroupName + "<br>" + "Value: " + subgroupValue)
+        .html(subgroupValue + " movies in the " + subgroupGenre + " genre pass " + subgroupName + " criteria")
         .style("opacity", 1)
 
   }
