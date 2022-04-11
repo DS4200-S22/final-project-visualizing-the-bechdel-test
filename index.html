@@ -50,11 +50,14 @@
   <h1 class="text-indentation">Visualization</h1>
     
   <div class="vis-holder" id="line-chart"> </div>
-  <div class="vis-holder" id="stackedbar-chart"> 
-    <!-- Initialize a select button -->
-    <select id="genre-dropdown"></select>
-  </div>
-  <div class="vis-holder" id="violin-chart"> </div>
+  <div class="vis-holder" id="stackedbar-chart"> </div>
+  <div class="flex-container">
+    <div class="vis-holder" id="violin-chart"> </div>
+    <div class="radio-group">
+      <input type="radio" name="distribution" value="rating" checked> IMDb rating (1-10) <br>
+      <input type="radio" name="distribution" value="runtime"> Runtime (in minutes) <br>
+    </div>
+</div>
 </div>
   
 <!-- More writeup -->

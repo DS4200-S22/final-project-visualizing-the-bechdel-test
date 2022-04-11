@@ -28,3 +28,10 @@ h1, h2, h3 {
 	margin-left: 17%;
 }
 
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-left:0%;
+}

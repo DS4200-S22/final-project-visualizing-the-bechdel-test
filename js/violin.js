@@ -217,4 +217,22 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   };
 
   violinPlot();
+
+   //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+
+   const radioButtons = document.querySelectorAll('input[name="distribution"]');
+
+   for (i of radioButtons) {
+     i.addEventListener("click", () => {
+         let selectedDistribution;
+         for (const radioButton of radioButtons) {
+             if (radioButton.checked) {
+               selectedDistribution = radioButton.value;
+                 break;
+             }
+         }
+         // show the output:
+         output.innerText = selectedDistribution;
+     });
+   }
 });
