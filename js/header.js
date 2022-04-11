@@ -5,7 +5,7 @@ const headerHeight = 500 - margin.top - margin.bottom;
 
 //Create space for the sticky linechart header on the page
 const header_holder = d3
-  .select("#linechart-header")
+  .select("#line-chart")
   .append("svg")
   .attr("width", headerWidth)
   .attr("height", headerHeight - headerMargin.top - headerMargin.bottom)

@@ -5,7 +5,7 @@ const height = 650; //- margin.top - margin.bottom;
 
 // Append SVG object to the body of the page to house bar chart .
 const svg3 = d3
-  .select("#vis-container")
+  .select("#stackedbar-chart")
   .append("svg")
   .attr("width", width - margin.left - margin.right)
   .attr("height", height - margin.top - margin.bottom)
