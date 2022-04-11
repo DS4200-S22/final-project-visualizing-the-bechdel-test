@@ -29,13 +29,19 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   let sortedPass;
   let sortedFail;
   let selectedAttribute = "imdb_rating";
+  let selectedMinYear;
+  let selectedMaxYear;
 
-  window.violinPlot = function (minYear, maxYear, attribute) {
+  window.violinPlot = function (attribute, minYear, maxYear) {
     // Clear existing violin plot
     svg.selectAll("*").remove();
 
-    // Set selected attribute
+    // Set properties
     selectedAttribute = attribute ?? selectedAttribute;
+    selectedMinYear = minYear;
+    selectedMaxYear = maxYear;
+
+    console.log(selectedMinYear, selectedMaxYear)
 
     // Axis titles
     const xTitle = "Bechdel Test Success";
@@ -101,8 +107,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         // Otherwise, filter it to that range
         const filtered = v.filter(
           (movie) =>
-            Number.parseInt(movie.year) >= minYear &&
-            Number.parseInt(movie.year) <= maxYear
+            Number.parseInt(movie.year) >= selectedMinYear &&
+            Number.parseInt(movie.year) <= selectedMaxYear
         );
         return filtered.length;
       },
@@ -217,4 +223,23 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   };
 
   violinPlot();
+
+   //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+
+   const radioButtons = document.querySelectorAll('input[name="distribution"]');
+
+   for (i of radioButtons) {
+     i.addEventListener("click", () => {
+         let selectedDistribution;
+         for (const radioButton of radioButtons) {
+             if (radioButton.checked) {
+               selectedDistribution = radioButton.value;
+                 break;
+             }
+         }
+         // show the output:
+         violinPlot(selectedDistribution, selectedMinYear, selectedMaxYear)
+         //output.innerText = selectedDistribution;
+     });
+   }
 });

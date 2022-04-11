@@ -145,4 +145,5 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   // Draw the initial bar chart
   barChart();
+
 });
