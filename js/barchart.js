@@ -14,7 +14,7 @@ const svg3 = d3
 // Color scale
 const color = d3
   .scaleOrdinal()
-  .range(["#86C3A9", "#59B69F", "#3E9C8A", "#2A856F"]);
+  .range(["#94DBBC", "#59B69F", "#3E9C8A", "#2A856F"]);
 
 // Plotting
 d3.csv("data/data_bechdel_newer.csv").then((data) => {
