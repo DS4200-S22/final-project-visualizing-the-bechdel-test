@@ -18,20 +18,23 @@ h1, h2, h3 {
 
 /* Full-width and Full-height */
 .vis-holder {
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  margin-left: 0;
-  margin-right:0;
+  text-align: center;
 }
 
 .text-indentation {
 	margin-left: 17%;
 }
 
+.radio-group {
+	min-width: 15%;
+}
+
 .flex-container {
+	min-width: 25px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
-	margin-left:0%;
 }
