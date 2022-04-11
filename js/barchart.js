@@ -126,7 +126,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
 
 
-
+//the problem is that it is appended to div, appending it to svg gives a
+//better(?) result but i think it is also wrong. tbd where it should go
 const tooltip = d3.select("#stackedbar-chart")
     .append("div")
     .style("opacity", 0)
