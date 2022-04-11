@@ -123,6 +123,44 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .text(yKey3)
       );
 
+
+
+
+
+const tooltip = d3.select("#stackedbar-chart")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px");
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  const mouseover = function(event, d) {
+    const subgroupName = d3.select(this.parentNode).datum().key;
+    const subgroupValue = d.data[subgroupName];
+    tooltip
+        .html("subgroup: " + subgroupName + "<br>" + "Value: " + subgroupValue)
+        .style("opacity", 1)
+
+  }
+  const mousemove = function(event, d) {
+    tooltip.style("transform","translateY(-55%)")
+           .style("left",(event.x)/2+"px")
+           .style("top",(event.y)/2-30+"px")
+  }
+  const mouseleave = function(event, d) {
+    tooltip
+      .style("opacity", 0)
+  }
+
+
+
+
+
+
     // Show the bars
     svg3
       .append("g")
@@ -140,7 +178,10 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .attr("x", (d, i) => x3(i))
       .attr("y", (d) => y3(d[1]))
       .attr("height", (d) => y3(d[0]) - y3(d[1]))
-      .attr("width", x3.bandwidth());
+      .attr("width", x3.bandwidth())
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave);
   };
 
   // Draw the initial bar chart
