@@ -162,7 +162,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           })
       );
 
-    window.barChart(minYear?.getFullYear(), maxYear?.getFullYear());
+    window.barChart(undefined, minYear?.getFullYear(), maxYear?.getFullYear());
     window.violinPlot(undefined, minYear?.getFullYear(), maxYear?.getFullYear());
   }
 

@@ -21,18 +21,26 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   let genreCounts;
   let stackFormatted;
   let stacked;
+  let currentlyFilteredGenres = new Set();
+  let selectedMinYear;
+  let selectedMaxYear;
 
   // Assign global function accessible to other scripts
-  window.barChart = function (minYear, maxYear) {
+  window.barChart = function (filteredGenres, minYear, maxYear) {
     // Clear existing bar chart
     svg3.selectAll("*").remove();
+
+    // Assign properties
+    currentlyFilteredGenres = filteredGenres ?? currentlyFilteredGenres
+    selectedMinYear = minYear;
+    selectedMaxYear = maxYear;
 
     // Create map of counts
     genreCounts = new Map();
     stackFormatted = [];
     data.forEach((d) => {
       const year = Number.parseInt(d.year);
-      if (year < minYear || year > maxYear) return;
+      if (year < selectedMinYear || year > selectedMaxYear) return;
       const bechdel_rating = d.bechdel_rating;
       d.genres.split(",").forEach((genre) => {
         genreCounts.set(genre, genreCounts.get(genre) || new Map());
@@ -47,7 +55,9 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
     // Sort by sum
     genreCounts = new Map(
-      [...genreCounts].sort(
+      [...genreCounts]
+      .filter((g) => !currentlyFilteredGenres.has(g[0]))
+      .sort(
         (a, b) =>
           d3.sum(Array.from(a[1].values())) < d3.sum(Array.from(b[1].values()))
       )
@@ -146,4 +156,20 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   // Draw the initial bar chart
   barChart();
 
+  //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+
+  const checkboxes = document.querySelectorAll('input[name="genres"]');
+
+  for (i of checkboxes) {
+    i.addEventListener("click", () => {
+      const filtered = new Set();
+      for (const cb of checkboxes) {
+        if (!cb.checked) {
+          filtered.add(cb.value);
+        }
+      }
+      // show the output:
+      barChart(filtered, selectedMinYear, selectedMaxYear);
+    });
+  }
 });

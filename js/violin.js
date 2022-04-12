@@ -41,8 +41,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     selectedMinYear = minYear;
     selectedMaxYear = maxYear;
 
-    console.log(selectedMinYear, selectedMaxYear)
-
     // Axis titles
     const xTitle = "Bechdel Test Success";
     const yTitle = titleMap[selectedAttribute];
