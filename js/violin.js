@@ -161,7 +161,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .x0((d) => xNum(-d[1]))
           .x1((d) => xNum(d[1]))
           .y((d) => y(d[0]))
-          .curve(d3.curveNatural) // This makes the line smoother to give the violin appearance. Try d3.curveStep to see the difference
+          .curve(d3.curveCatmullRom) // This makes the line smoother to give the violin appearance. Try d3.curveStep to see the difference
       );
 
     // Generate the box plots
