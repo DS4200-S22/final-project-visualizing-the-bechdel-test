@@ -1,6 +1,7 @@
 /* General formatting */
 body {
-  padding: 0 10px;
+  padding: 0;
+  margin: 0;  
   font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir,
     "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
     roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
@@ -63,4 +64,12 @@ h3 {
 
 .no-margin {
   margin: 0;
+}
+
+#line-chart {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }

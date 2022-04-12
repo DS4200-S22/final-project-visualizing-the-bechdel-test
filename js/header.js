@@ -1,15 +1,17 @@
 // Set margins and dimensions
-const headerMargin = { top: 50, right: 50, bottom: 50, left: 150 };
+const headerMargin = { top: 50, right: 20, bottom: 10, left: 50 };
 const headerWidth = window.innerWidth; // - margin.left - margin.right;
-const headerHeight = 500 - margin.top - margin.bottom;
+const headerHeight = 150;
 
 //Create space for the sticky linechart header on the page
 const header_holder = d3
   .select("#line-chart")
   .append("svg")
-  .attr("width", headerWidth)
-  .attr("height", headerHeight - headerMargin.top - headerMargin.bottom)
-  .attr("viewBox", [0, 0, headerWidth, headerHeight + headerMargin.bottom]);
+  .attr("minHeight", 100)
+  .attr("viewBox", `0 0 ${headerWidth + headerMargin.left + headerMargin.right} ${headerHeight + headerMargin.top + headerMargin.bottom}` )
+  .append("g")
+    .attr("transform",
+          "translate(" + headerMargin.left + "," + 0 + ")");
 
 //initializes the brush for the line graph header
 let year_brush;
@@ -48,7 +50,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     g
       .append("text")
       .attr("x", headerWidth / 2)
-      .attr("y", headerMargin.bottom - 4)
+      .attr("y", headerMargin.top)
       .attr("fill", "black")
       .attr("text-anchor", "center")
       .text(xTitle)
@@ -59,15 +61,16 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   yAxis = header_holder
     .append("g")
-    .call(d3.axisLeft(y))
+    .call(d3.axisLeft(y)
+    .ticks(3))
     .style("font", "20px arial")
     .call((g) =>
     g
       .append("text")
       .attr("x", 5)
-      .attr("y", headerMargin.top - 15)
+      .attr("y", headerMargin.top)
       .attr("fill", "black")
-      .attr("text-anchor", "end")
+      .attr("text-anchor", "start")
       .text(yTitle)
   );
 
