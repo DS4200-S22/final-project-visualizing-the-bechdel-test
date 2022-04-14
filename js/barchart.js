@@ -144,9 +144,11 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     const mouseover = function(event, d) {
       const subgroupName = d3.select(this.parentNode).datum().key;
       const subgroupValue = d.data[subgroupName];
+      const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3]
+      const percent = Math.round((subgroupValue / genretotal) * 100)
       const subgroupGenre = genreCounts.forEach((v, k) => k);
       tooltip
-        .html(subgroupValue + " movies in the " + subgroupGenre + " genre pass " + subgroupName + " criteria")
+        .html(percent + "% of movies in the " + d.data["genre"] + " genre pass " + subgroupName + " criteria")
         .style("opacity", 1)
     }
     const mousemove = function(event, d) {
