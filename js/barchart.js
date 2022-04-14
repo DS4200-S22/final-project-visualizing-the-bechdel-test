@@ -134,6 +134,49 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .text(yKey3)
       );
 
+
+
+
+    //the problem is that it is appended to div, appending it to svg gives a
+    //better(?) result but i think it is also wrong. tbd where it should go
+    const tooltip = d3.select("#stackedbar-chart")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "1px")
+      .style("border-radius", "5px")
+      .style("padding", "10px");
+
+    //the genre labels are coming from ???? idk ill figure this out eventually
+    //so what i gotta do is get it to know which item index from genreCounts it wants
+    //hard code probably?? but once its got the radio buttons that wont work
+    const mouseover = function(event, d) {
+      const subgroupName = d3.select(this.parentNode).datum().key;
+      const subgroupValue = d.data[subgroupName];
+      const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3]
+      const percent = Math.round((subgroupValue / genretotal) * 100)
+      const subgroupGenre = genreCounts.forEach((v, k) => k);
+      tooltip
+        .html(percent + "% of movies in the " + d.data["genre"] + " genre pass " + subgroupName + " criteria")
+        .style("opacity", 1)
+    }
+    const mousemove = function(event, d) {
+      tooltip.style("transform","translateY(-55%)")
+        .style("left",(event.x)/2+"px")
+        .style("top",(event.y)/2-30+"px")
+    }
+    const mouseleave = function(event, d) {
+      tooltip
+        .style("opacity", 0)
+    }
+
+
+
+
+
+
     // Show the bars
     svg3
       .append("g")
@@ -151,7 +194,10 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .attr("x", (d, i) => x3(i))
       .attr("y", (d) => y3(d[1]))
       .attr("height", (d) => y3(d[0]) - y3(d[1]))
-      .attr("width", x3.bandwidth());
+      .attr("width", x3.bandwidth())
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave);
   };
 
   // Draw the initial bar chart
