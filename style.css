@@ -64,6 +64,7 @@ h3 {
   margin-left: 70%;
   margin-top: 7%;
   width: 15%;
+  z-index: 1;
 }
 
 #checkboxes-container {
