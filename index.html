@@ -43,16 +43,29 @@
       Our visualization tool aims to provide information on the correlation between a movie's Bechdel Test status and factors such as box office success, year of release, and general audience sentiment using D3.
     </p>
 </div>
-
  
 <div class='visualization-column'>
   <h1 class="text-indentation">Visualization</h1>
 
+  <p class="content-column"> Our visualization primarily functions as a comparison and general overview tool, providing multiple different components so users can understand the correlation between different facets of film and representation of women in these films. 
+  </p>
+
+  <p class="content-column">With this line chart, you can brush over a range of years, which will then automatically update the year range of every visualization on the page, focusing on films of that particular time period.
+    When no years are selected, every visualization defaults to representing all movies in the dataset.
+    <br><br>Double click to reset the chart. </p>
+
+  <h2 class="content-column" style="text-align: center;">Bechdel Test Pass Rates in Film Over the Years</h2>
   <div class="vis-holder" id="line-chart"> </div>
-  <div class="vis-holder" id="stackedbar-chart">
-  </div>
-  <div class="checkboxes-container">
-    <h4 class="no-margin">Filter by Genre</h4>
+
+  <p class="content-column">Within this segmented bar chart, you can select a number of genres featured in our dataset from the menu on the right of the plot. 
+    This way, you can compare the movies that pass and fail certain tests by genre so you can see the disparity in gender equality and representation by genre. 
+    Some genres may have better representation than others, and this may have changed over time.
+    <br><br> 
+    Each segment of the bar chart represents the breakdown of how many criteria of the Bechdel Test the given movie passes. 
+    <br><br>You can hover over a segment to view a tooltip that explains the percentage of movies in that segment, as well as the specific test that is passed in that segment. </p>
+  <h2 class="content-column" style="text-align: center;">Bechdel Test Pass Rates by Genre</h2>
+  <div class="child" id="checkboxes-container">
+    <h4 id="checkbox-header">Filter by Genre</h4>
     <div class="checkboxes">
       <input type="checkbox" name="genres" value="Action" autocomplete="off" checked>
       <label for="Action">Action</label>
@@ -126,8 +139,14 @@
       <input type="checkbox" name="genres" value="Western" autocomplete="off" checked>
       <label for="Western">Western</label>
     </div>
+    <div class="vis-holder" id="stackedbar-chart"> </div>
   </div>
-  <div class="flex-container">
+  <p class="content-column">When IMDb* rating is selected as the metric of choice, you can view audience sentiment toward movies that pass and fail the Bechdel test in that time period. 
+    <br><br>If runtime is chosen as the metric, you can also view the relationship between the length of a movie and pass/fail rates over time. 
+    <br><br>You can hover over the box and whisker plot in the middle of each violin to view a tooltip that gives summary statistics for each violin. 
+  <br><br> *Internet Movie Database</p>
+  <h2 class="content-column" style="text-align: center;">Distribution of Movie Ratings and Runtimes in Relation to Bechdel Test Success</h2>
+  <div class="violin-container">
     <div class="vis-holder" id="violin-chart"> </div>
     <div class="radio-group">
       <input type="radio" name="distribution" value="imdb_rating" autocomplete="off" checked> IMDb rating (1-10) <br>
@@ -150,25 +169,7 @@
     <p>Your browser doesn't support HTML5 video. Here is
      a <a href='http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4'>link to the video</a> instead.</p>
   </video>
-
-  <h1>Visualization Explanation</h1>
-  
-  <p>
-    Our visualization primarily functions as a comparison and general overview tool, providing multiple different components so users can understand the correlation between different facets of film and representation of women in these films. 
-    The line chart at the top will be a sticky header that allows for the user to brush over a range of years, which will then automatically update the year range of every visualization on the page, focusing on that particular subset of data. 
-    This allows them to compare the breakdown of movies that pass and fail the Bechdel test over the years, both in the past and in more contemporary movies. When no years are selected, every visualization defaults to representing all movies in the dataset. 
-    Within the segmented bar chart component of our visualization, the user can select a number of genres featured in our dataset from a dropdown menu on the right of the plot. 
-    This allows the user to be able to compare the movies that pass and fail certain tests by genre so they can see the disparity in gender equality and representation by genre. 
-    Some genres may have better representation than others, and this may have changed over time. 
-    Each segment of the bar chart represents the breakdown of how many criteria of the Bechdel Test the given movie passes. 
-    The user can hover over a segment to view a tooltip that explains the percentage of movies in that segment, as well as the specific test that is passed in that segment. 
-    Meanwhile, within the violin plot, the user can select the metric they want to see the distribution of over the dataset (either the IMDb rating of the movie or the runtime of the movie). 
-    This allows the user to view audience sentiment toward movies that pass and fail the Bechdel test in that time period when IMDb rating is selected as the metric. 
-    They can also view the relationship between runtime and pass/fail rates over time. 
-    Users can hover over the box and whisker plot in the middle of each violin to view a tooltip that gives summary statistics for each violin. 
-    
-    <strong>Include revised explanation and presentation slides!</strong>
-  </p>
+  <strong>Include revised explanation and presentation slides!</strong>
   
   <h1>Acknowledgments</h1>
 

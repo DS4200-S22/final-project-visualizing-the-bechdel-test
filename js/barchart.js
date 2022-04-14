@@ -85,7 +85,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .scaleBand()
       .domain(d3.range(genreCounts.size))
       .range([margin.left, width - margin.right])
-      .padding(0.1);
+      .padding(.25)
+      ;
 
     // Add x axis
     svg3
