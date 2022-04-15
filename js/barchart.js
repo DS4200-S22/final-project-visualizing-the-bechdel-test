@@ -2,7 +2,6 @@
 const margin = { top: 50, right: 50, bottom: 50, left: 200 };
 const width = window.innerWidth; //- margin.left - margin.right;
 const height = 650; //- margin.top - margin.bottom;
-const tooltipWidth = 150
 
 // Append SVG object to the body of the page to house bar chart .
 const svg3 = d3
@@ -15,18 +14,10 @@ const svg3 = d3
 //the problem is that it is appended to div, appending it to svg gives a
 //better(?) result but i think it is also wrong. tbd where it should go
 const tooltip = d3
-  .select("#stackedbar-chart")
+  .select("body")
   .append("div")
-  .style("opacity", 0)
   .attr("class", "tooltip")
-  .style("width", `${tooltipWidth}px`)
-  .style("background-color", "white")
-  .style("border", "solid")
-  .style("border-width", "1px")
-  .style("border-radius", "5px")
-  .style("padding", "10px")
-  .style("position", "absolute")
-  .style("z-index", 15);
+  .style("opacity", 0);
 
 // Color scale
 const color = d3
@@ -158,24 +149,40 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       const subgroupValue = d.data[subgroupName];
       const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3];
       const percent = Math.round((subgroupValue / genretotal) * 100);
-      const subgroupGenre = genreCounts.forEach((v, k) => k);
-      const [mouseX, mouseY] = d3.pointer(event);
-      console.log(mouseX)
+
       tooltip
         .html(
-          `<b>${percent}%</b> of <b>${d.data["genre"]}</b> movies released from <b>${selectedMinYear ?? 1900}-${selectedMaxYear ?? 2022}</b> pass <b>${subgroupName}</b> criteria.`
+          `<b>${percent}%</b> of <b>${
+            d.data["genre"]
+          }</b> movies released from <b>${selectedMinYear ?? 1900}-${
+            selectedMaxYear ?? 2022
+          }</b> pass <b>${subgroupName}</b> criteria.<ul class="tooltip-list">${tooltipFigures(+subgroupName)}</ul>`
         )
         .style("opacity", 1)
-        .attr('transform', `translate(${mouseX}px, ${mouseY}px)`);
+        .style("left", event.pageX + 20 + "px")
+        .style("top", event.pageY - 20 + "px");
     };
     const mousemove = function (event, d) {
-      const coordinates = d3.pointer(event);
-      // tooltip
-      //   .style("top", (coordinates[1])+"px")
-      //   .style("left",(coordinates[0])+"px");
+      // Move to the tip of the mouse
+      tooltip
+        .style("left", event.pageX + 20 + "px")
+        .style("top", event.pageY - 20 + "px");
     };
     const mouseleave = function (event, d) {
+      // Hide when mouse leaves
       tooltip.style("opacity", 0);
+    };
+
+    const tooltipFigures = (bechdelRating) => {
+      const figure = (filename, caption) => `<li><figure class="tooltip-figure">
+      <img src="files/${filename}" width="40" height="40">
+      <figcaption class="tooltip-caption">${caption}</figcaption>
+    </figure></li>`;
+      let figHtml = ``;
+      if (bechdelRating > 0) figHtml += figure("women.png", "2 women");
+      if (bechdelRating > 1) figHtml += figure("talk.png", "Talk about");
+      if (bechdelRating > 2) figHtml += figure("nomen.png", "Anything but men");
+      return figHtml;
     };
 
     // Show the bars
