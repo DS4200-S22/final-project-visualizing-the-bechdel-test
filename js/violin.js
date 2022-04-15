@@ -23,6 +23,13 @@ const svg = d3
     "translate(" + violinMargin.left + "," + violinMargin.top + ")"
   );
 
+// Append tooltip div
+const violinTooltip = d3
+  .select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
 // Read the data and compute summary statistics for each specie
 d3.csv("data/data_bechdel_newer.csv").then((data) => {
   let sumstat;
@@ -179,6 +186,34 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       const min = q1 - 1.5 * interQuantileRange;
       const max = q1 + 1.5 * interQuantileRange;
 
+      // Mouse Handling
+      const violinMouseOver = function (event, d) {
+        // Show tooltip on hover
+        violinTooltip
+          .html(
+            `<ul class="tooltip-list">
+            <li><b>MIN: </b>${min.toFixed(1)}</li>
+            <li><b>Q1: </b>${q1.toFixed(1)}</li>
+            <li><b>MEDIAN: </b>${median.toFixed(1)}</li>
+            <li><b>Q3: </b>${q3.toFixed(1)}</li>
+            <li><b>MAX:</b>${max.toFixed(1)}</li>
+            </ul>`
+          )
+          .style("opacity", 1)
+          .style("left", event.pageX + 20 + "px")
+          .style("top", event.pageY - 20 + "px");
+      };
+      const violinMouseMove = function (event, d) {
+        // Move to the tip of the mouse
+        violinTooltip
+          .style("left", event.pageX + 20 + "px")
+          .style("top", event.pageY - 20 + "px");
+      };
+      const violinMouseLeave = function (event, d) {
+        // Hide when mouse leaves
+        violinTooltip.style("opacity", 0);
+      };
+
       // Positioning constants
       const center = x.bandwidth() / 2 + x(xBand);
       const width = 50;
@@ -200,7 +235,10 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         .attr("height", y(q1) - y(q3))
         .attr("width", width)
         .attr("stroke", "black")
-        .style("fill", "gray");
+        .style("fill", "gray")
+        .on("mouseover", violinMouseOver)
+        .on("mousemove", violinMouseMove)
+        .on("mouseleave", violinMouseLeave);
 
       // Show median, min and max horizontal lines
       svg
@@ -216,28 +254,31 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         .attr("y2", function (d) {
           return y(d);
         })
-        .attr("stroke", "black");
+        .attr("stroke", "black")
+        .on("mouseover", violinMouseOver)
+        .on("mousemove", violinMouseMove)
+        .on("mouseleave", violinMouseLeave);
     });
   };
 
   violinPlot();
 
-   //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+  //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 
-   const radioButtons = document.querySelectorAll('input[name="distribution"]');
+  const radioButtons = document.querySelectorAll('input[name="distribution"]');
 
-   for (i of radioButtons) {
-     i.addEventListener("click", () => {
-         let selectedDistribution;
-         for (const radioButton of radioButtons) {
-             if (radioButton.checked) {
-               selectedDistribution = radioButton.value;
-                 break;
-             }
-         }
-         // show the output:
-         violinPlot(selectedDistribution, selectedMinYear, selectedMaxYear)
-         //output.innerText = selectedDistribution;
-     });
-   }
+  for (i of radioButtons) {
+    i.addEventListener("click", () => {
+      let selectedDistribution;
+      for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+          selectedDistribution = radioButton.value;
+          break;
+        }
+      }
+      // show the output:
+      violinPlot(selectedDistribution, selectedMinYear, selectedMaxYear);
+      //output.innerText = selectedDistribution;
+    });
+  }
 });
