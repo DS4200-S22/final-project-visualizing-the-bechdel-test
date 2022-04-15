@@ -11,8 +11,7 @@ const svg3 = d3
   .attr("height", height - margin.top - margin.bottom)
   .attr("viewBox", [0, 0, width, height]);
 
-//the problem is that it is appended to div, appending it to svg gives a
-//better(?) result but i think it is also wrong. tbd where it should go
+// Append tooltip div
 const tooltip = d3
   .select("body")
   .append("div")
@@ -141,10 +140,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .text(yKey3)
       );
 
-    //the genre labels are coming from ???? idk ill figure this out eventually
-    //so what i gotta do is get it to know which item index from genreCounts it wants
-    //hard code probably?? but once its got the radio buttons that wont work
     const mouseover = function (event, d) {
+      // Show tooltip on hover
       const subgroupName = d3.select(this.parentNode).datum().key;
       const subgroupValue = d.data[subgroupName];
       const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3];
