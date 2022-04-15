@@ -1,7 +1,7 @@
 /* General formatting */
 body {
   padding: 0;
-  margin: 0;  
+  margin: 0;
   font: 18px/1.5 -apple-system, BlinkMacSystemFont, "avenir next", avenir,
     "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans",
     roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu,
@@ -34,7 +34,7 @@ h3 {
 }
 
 .radio-group {
-	min-width: 15%;
+  min-width: 15%;
   position: absolute;
   margin-left: 73%;
   margin-top: 6%;
@@ -45,11 +45,11 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 #checkbox-header {
-  margin-left:73%;
+  margin-left: 73%;
   margin-top: 3.5%;
 }
 
@@ -71,7 +71,7 @@ h3 {
 #checkboxes-container {
   display: flex;
   flex-flow: wrap;
-  margin-left:3%;
+  margin-left: 3%;
   justify-content: flex-start;
   width: 100%;
   align-content: center;
@@ -86,4 +86,33 @@ h3 {
   background-color: white;
   box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+}
+
+.tooltip {
+  width: 150px;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 15;
+}
+
+.tooltip-figure {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+  gap: 10px;
+}
+
+.tooltip-list {
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip-caption {
+  line-height: 1;
 }

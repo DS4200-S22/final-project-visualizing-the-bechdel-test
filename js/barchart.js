@@ -11,6 +11,13 @@ const svg3 = d3
   .attr("height", height - margin.top - margin.bottom)
   .attr("viewBox", [0, 0, width, height]);
 
+// Append tooltip div
+const tooltip = d3
+  .select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
 // Color scale
 const color = d3
   .scaleOrdinal()
@@ -31,7 +38,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     svg3.selectAll("*").remove();
 
     // Assign properties
-    currentlyFilteredGenres = filteredGenres ?? currentlyFilteredGenres
+    currentlyFilteredGenres = filteredGenres ?? currentlyFilteredGenres;
     selectedMinYear = minYear;
     selectedMaxYear = maxYear;
 
@@ -56,11 +63,12 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     // Sort by sum
     genreCounts = new Map(
       [...genreCounts]
-      .filter((g) => !currentlyFilteredGenres.has(g[0]))
-      .sort(
-        (a, b) =>
-          d3.sum(Array.from(a[1].values())) < d3.sum(Array.from(b[1].values()))
-      )
+        .filter((g) => !currentlyFilteredGenres.has(g[0]))
+        .sort(
+          (a, b) =>
+            d3.sum(Array.from(a[1].values())) <
+            d3.sum(Array.from(b[1].values()))
+        )
     );
 
     // Format for stacking
@@ -85,9 +93,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .scaleBand()
       .domain(d3.range(genreCounts.size))
       .range([margin.left, width - margin.right])
-      .padding(.25)
-      ;
-
+      .padding(0.25);
     // Add x axis
     svg3
       .append("g")
@@ -134,48 +140,47 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .text(yKey3)
       );
 
-
-
-
-    //the problem is that it is appended to div, appending it to svg gives a
-    //better(?) result but i think it is also wrong. tbd where it should go
-    const tooltip = d3.select("#stackedbar-chart")
-      .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "1px")
-      .style("border-radius", "5px")
-      .style("padding", "10px");
-
-    //the genre labels are coming from ???? idk ill figure this out eventually
-    //so what i gotta do is get it to know which item index from genreCounts it wants
-    //hard code probably?? but once its got the radio buttons that wont work
-    const mouseover = function(event, d) {
+    const mouseover = function (event, d) {
+      // Show tooltip on hover
       const subgroupName = d3.select(this.parentNode).datum().key;
       const subgroupValue = d.data[subgroupName];
-      const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3]
-      const percent = Math.round((subgroupValue / genretotal) * 100)
-      const subgroupGenre = genreCounts.forEach((v, k) => k);
+      const genretotal = d.data[0] + d.data[1] + d.data[2] + d.data[3];
+      const percent = Math.round((subgroupValue / genretotal) * 100);
+
       tooltip
-        .html(percent + "% of movies in the " + d.data["genre"] + " genre pass " + subgroupName + " criteria")
+        .html(
+          `<b>${percent}%</b> of <b>${
+            d.data["genre"]
+          }</b> movies released from <b>${selectedMinYear ?? 1900}-${
+            selectedMaxYear ?? 2022
+          }</b> pass <b>${subgroupName}</b> criteria.<ul class="tooltip-list">${tooltipFigures(+subgroupName)}</ul>`
+        )
         .style("opacity", 1)
-    }
-    const mousemove = function(event, d) {
-      tooltip.style("transform","translateY(-55%)")
-        .style("left",(event.x)/2+"px")
-        .style("top",(event.y)/2-30+"px")
-    }
-    const mouseleave = function(event, d) {
+        .style("left", event.pageX + 20 + "px")
+        .style("top", event.pageY - 20 + "px");
+    };
+    const mousemove = function (event, d) {
+      // Move to the tip of the mouse
       tooltip
-        .style("opacity", 0)
-    }
+        .style("left", event.pageX + 20 + "px")
+        .style("top", event.pageY - 20 + "px");
+    };
+    const mouseleave = function (event, d) {
+      // Hide when mouse leaves
+      tooltip.style("opacity", 0);
+    };
 
-
-
-
-
+    const tooltipFigures = (bechdelRating) => {
+      const figure = (filename, caption) => `<li><figure class="tooltip-figure">
+      <img src="files/${filename}" width="40" height="40">
+      <figcaption class="tooltip-caption">${caption}</figcaption>
+    </figure></li>`;
+      let figHtml = ``;
+      if (bechdelRating > 0) figHtml += figure("women.png", "2 women");
+      if (bechdelRating > 1) figHtml += figure("talk.png", "Talk about");
+      if (bechdelRating > 2) figHtml += figure("nomen.png", "Anything but men");
+      return figHtml;
+    };
 
     // Show the bars
     svg3
