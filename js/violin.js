@@ -196,7 +196,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
             <li><b>Q1: </b>${q1.toFixed(1)}</li>
             <li><b>MEDIAN: </b>${median.toFixed(1)}</li>
             <li><b>Q3: </b>${q3.toFixed(1)}</li>
-            <li><b>MAX:</b>${max.toFixed(1)}</li>
+            <li><b>MAX: </b>${max.toFixed(1)}</li>
             </ul>`
           )
           .style("opacity", 1)
