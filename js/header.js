@@ -105,7 +105,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     .datum(pass_count_sorted)
     .attr("class", "line") // I add the class line to be able to modify this line later on.
     .attr("fill", "none")
-    .attr("stroke", "steelblue")
+    .attr("stroke", "#2A856F")
     .attr("stroke-width", 1.5)
     .attr(
       "d",
