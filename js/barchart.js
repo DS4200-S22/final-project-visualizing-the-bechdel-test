@@ -210,8 +210,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
   // Draw the initial bar chart
   barChart();
 
-  //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-
   const checkboxes = document.querySelectorAll('input[name="genres"]');
 
   for (i of checkboxes) {

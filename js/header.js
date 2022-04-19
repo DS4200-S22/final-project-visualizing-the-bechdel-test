@@ -19,7 +19,6 @@ let year_brush;
 //loads in the data from the cleaned CSV file of our movie dataset
 //Read the data
 d3.csv("data/data_bechdel_newer.csv").then((data) => {
-  // citation: https://observablehq.com/@d3/d3-group
 
   const pass_count = d3.rollup(
     data,
@@ -31,7 +30,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     [...pass_count].sort((a, b) => String(a[0]).localeCompare(b[0]))
   );
 
-  //citation: https://d3-graph-gallery.com/graph/line_basic.html
   const xTitle = "Year"
   const yTitle = "Percent of movies that pass the Bechdel Test"
 
@@ -96,8 +94,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   // Create the line variable: where both the line and the brush take place
   const line = header_holder.append("g").attr("clip-path", "url(#clip)");
-
-  //citation: https://d3-graph-gallery.com/graph/line_brushZoom.html
 
   // Add the line
   line

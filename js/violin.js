@@ -1,7 +1,3 @@
-// https://d3-graph-gallery.com/graph/violin_basicHist.html
-
-// https://d3-graph-gallery.com/graph/boxplot_basic.html
-
 // set the dimensions and margins of the graph
 const violinMargin = { top: 10, right: 40, bottom: 30, left: 40 };
 const violinWidth = 800;
@@ -188,15 +184,17 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
       // Mouse Handling
       const violinMouseOver = function (event, d) {
+
+        
         // Show tooltip on hover
         violinTooltip
           .html(
             `<ul class="tooltip-list">
-            <li><b>MIN: </b>${min.toFixed(1)}</li>
-            <li><b>Q1: </b>${q1.toFixed(1)}</li>
-            <li><b>MEDIAN: </b>${median.toFixed(1)}</li>
-            <li><b>Q3: </b>${q3.toFixed(1)}</li>
             <li><b>MAX: </b>${max.toFixed(1)}</li>
+            <li><b>Q3: </b>${q3.toFixed(1)}</li>
+            <li><b>MEDIAN: </b>${median.toFixed(1)}</li>
+            <li><b>Q1: </b>${q1.toFixed(1)}</li>
+            <li><b>MIN: </b>${min.toFixed(1)}</li>
             </ul>`
           )
           .style("opacity", 1)
@@ -263,8 +261,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   violinPlot();
 
-  //citation: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-
   const radioButtons = document.querySelectorAll('input[name="distribution"]');
 
   for (i of radioButtons) {
@@ -278,7 +274,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       }
       // show the output:
       violinPlot(selectedDistribution, selectedMinYear, selectedMaxYear);
-      //output.innerText = selectedDistribution;
     });
   }
 });
