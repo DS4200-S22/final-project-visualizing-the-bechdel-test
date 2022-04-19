@@ -47,8 +47,9 @@ h3 {
 }
 
 #checkbox-header {
-  margin-left: 73%;
+  margin-left: 72%;
   margin-top: 3.5%;
+  color:#2A856F;
 }
 
 .checkboxes {
@@ -58,9 +59,11 @@ h3 {
   height: 25%;
   overflow-y: auto;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #59B69F;
   margin-left: 70%;
-  margin-top: 7%;
+  margin-top: 6%;
   width: 15%;
   z-index: 1;
   background-color: white;
@@ -78,12 +81,29 @@ h3 {
   align-items: flex-start;
 }
 
+.checkboxes::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #59B69F;
+}
+
 #line-chart {
   position: sticky;
   top: 0;
   background-color: white;
   box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+}
+
+rect.selection {
+  fill: #59B69F;
+}
+
+input {
+  accent-color:#2A856F;
 }
 
 .tooltip {

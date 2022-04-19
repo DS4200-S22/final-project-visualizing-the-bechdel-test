@@ -160,7 +160,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .datum((d) => d[1])
       // So now we are working bin per bin
       .style("stroke", "none")
-      .style("fill", "#69b3a2")
+      .style("fill", "#94DBBC")
       .attr(
         "d",
         d3
@@ -235,7 +235,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         .attr("height", y(q1) - y(q3))
         .attr("width", width)
         .attr("stroke", "black")
-        .style("fill", "gray")
+        .style("fill", "#2A856F")
         .on("mouseover", violinMouseOver)
         .on("mousemove", violinMouseMove)
         .on("mouseleave", violinMouseLeave);
