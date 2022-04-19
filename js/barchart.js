@@ -178,9 +178,9 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       <figcaption class="tooltip-caption">${caption}</figcaption>
     </figure></li>`;
       let figHtml = ``;
-      if (bechdelRating > 0) figHtml += figure("women.png", "2 women");
-      if (bechdelRating > 1) figHtml += figure("talk.png", "Talk about");
-      if (bechdelRating > 2) figHtml += figure("nomen.png", "Anything but men");
+      if (bechdelRating > 0) figHtml += figure("women.png", "2 named women");
+      if (bechdelRating > 1) figHtml += figure("talk.png", "Have a conversation");
+      if (bechdelRating > 2) figHtml += figure("nomen.png", "About anything but men");
       return figHtml;
     };
 
