@@ -55,7 +55,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
     const y = d3
       .scaleLinear()
-      .domain([0, maxY]) // Note that here the Y scale is set manually
+      .domain([0, maxY])
       .range([violinHeight - violinMargin.bottom, violinMargin.top]);
     svg
       .append("g")
@@ -153,7 +153,10 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       .append("g")
       .attr("transform", (d) => "translate(" + x(d[0]) + " ,0)") // Translation on the right to be at the group position
       .append("path")
-      .datum((d) => d[1])
+      .datum((d) => {
+        // Filter out empty strings
+        return new Map([...d[1]].filter(([k]) => k !== ""));
+      })
       // So now we are working bin per bin
       .style("stroke", "none")
       .style("fill", "#94DBBC")
@@ -172,29 +175,29 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       // Compute summary statistics used for the box:
       let expandedValues = [];
       sumstat.get(xBand).forEach((v, k) => {
-        expandedValues = expandedValues.concat(Array(v).fill(k));
+        expandedValues = expandedValues
+          .filter((v) => v.length > 0)
+          .concat(Array(v).fill(k));
       });
 
       const q1 = d3.quantile(expandedValues, 0.25);
       const median = d3.quantile(expandedValues, 0.5);
       const q3 = d3.quantile(expandedValues, 0.75);
-      const interQuantileRange = q3 - q1;
-      const min = q1 - 1.5 * interQuantileRange;
-      const max = q1 + 1.5 * interQuantileRange;
+      const max = d3.max(expandedValues.map(v => +v));
+      const min = d3.min(expandedValues.map(v => +v));
+      console.log(min);
 
       // Mouse Handling
       const violinMouseOver = function (event, d) {
-
-        
         // Show tooltip on hover
         violinTooltip
           .html(
             `<ul class="tooltip-list">
-            <li><b>MAX: </b>${max.toFixed(1)}</li>
+            <li><b>MAX: </b>${max}</li>
             <li><b>Q3: </b>${q3.toFixed(1)}</li>
             <li><b>MEDIAN: </b>${median.toFixed(1)}</li>
             <li><b>Q1: </b>${q1.toFixed(1)}</li>
-            <li><b>MIN: </b>${min.toFixed(1)}</li>
+            <li><b>MIN: </b>${min}</li>
             </ul>`
           )
           .style("opacity", 1)
