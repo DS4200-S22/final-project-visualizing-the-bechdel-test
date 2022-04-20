@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 const violinMargin = { top: 10, right: 40, bottom: 30, left: 40 };
-const violinWidth = 800;
-const violinHeight = 400;
+const violinWidth = 1000;
+const violinHeight = 600;
 
 const titleMap = {
   imdb_rating: "IMDb Rating",
@@ -26,7 +26,7 @@ const violinTooltip = d3
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-// Read the data and compute summary statistics for each specie
+// Read the data and compute summary statistics
 d3.csv("data/data_bechdel_newer.csv").then((data) => {
   let sumstat;
   let sortedPass;
@@ -55,7 +55,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
     const y = d3
       .scaleLinear()
-      .domain([0, maxY]) // Note that here the Y scale is set manually
+      .domain([0, maxY])  
       .range([violinHeight - violinMargin.bottom, violinMargin.top]);
     svg
       .append("g")
@@ -72,7 +72,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .text(yTitle)
       );
 
-    // Build and Show the X scale. It is a band scale like for a boxplot: each group has an dedicated RANGE on the axis. This range has a length of x.bandwidth
+    // Builds and shows X scale
     const x = d3
       .scaleBand()
       .range([
@@ -80,7 +80,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         violinWidth - violinMargin.left - violinMargin.right,
       ])
       .domain(["Pass", "Fail"])
-      .padding(0.05); // This is important: it is the space between 2 groups. 0 means no padding. 1 is the maximum.
+      .padding(0.05); 
     svg
       .append("g")
       .attr(
@@ -131,30 +131,31 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     sumstat.set("Pass", sortedPass);
     sumstat.set("Fail", sortedFail);
 
-    // What is the biggest number of value in a bin? We need it cause this value will have a width of 100% of the bandwidth.
+    // gets biggest number of value in a bin
     let maxNum = 0;
     sumstat.forEach((v) => {
       const maxInCategory = d3.max(Array.from(v.values()));
       maxNum = d3.max([maxNum, maxInCategory]);
     });
 
-    // The maximum width of a violin must be x.bandwidth = the width dedicated to a group
     const xNum = d3
       .scaleLinear()
+      //the width dedicated to a group
       .range([0, x.bandwidth()])
       .domain([-maxNum, maxNum]);
 
-    // Add the violin to this svg!
+    // Add the violin to this svg
     svg
       .selectAll("myViolin")
       .data(sumstat)
       .enter()
-      // So now we are working group per group
+      //working @ group level
       .append("g")
-      .attr("transform", (d) => "translate(" + x(d[0]) + " ,0)") // Translation on the right to be at the group position
+      // Translation on the right to be at the group position
+      .attr("transform", (d) => "translate(" + x(d[0]) + " ,0)") 
       .append("path")
       .datum((d) => d[1])
-      // So now we are working bin per bin
+      // working @ bin level
       .style("stroke", "none")
       .style("fill", "#94DBBC")
       .attr(
@@ -164,7 +165,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
           .x0((d) => xNum(-d[1]))
           .x1((d) => xNum(d[1]))
           .y((d) => y(d[0]))
-          .curve(d3.curveCatmullRom) // This makes the line smoother to give the violin appearance. Try d3.curveStep to see the difference
+          //smooths the line to make the plot look like a violin
+          .curve(d3.curveCatmullRom)
       );
 
     // Generate the box plots

@@ -85,21 +85,23 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   // Add brushing
   const brush = d3
-    .brushX() // Add the brush feature using the d3.brush function
+    .brushX() 
     .extent([
       [0, headerMargin.top],
       [headerWidth, headerHeight],
     ])
-    .on("end", updateChart); // Each time the brush selection changes, trigger the 'updateChart' function
+    // Each time the brush selection changes, trigger the 'updateChart' function
+    .on("end", updateChart); 
 
-  // Create the line variable: where both the line and the brush take place
+  // both the line and the brush take place
   const line = header_holder.append("g").attr("clip-path", "url(#clip)");
 
   // Add the line
   line
     .append("path")
     .datum(pass_count_sorted)
-    .attr("class", "line") // I add the class line to be able to modify this line later on.
+    //allows for line to be modified later on
+    .attr("class", "line") 
     .attr("fill", "none")
     .attr("stroke", "#2A856F")
     .attr("stroke-width", 1.5)
@@ -126,7 +128,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
 
   // A function that update the chart for given boundaries
   function updateChart(event, d) {
-    // What are the selected boundaries?
+    //checks for boundaries
     extent = event.selection;
 
     let minYear;
@@ -140,7 +142,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       maxYear = x.invert(extent[1]);
       x.domain([x.invert(extent[0]), x.invert(extent[1])]);
 
-      line.select(".brush").call(brush.move, null); // This remove the grey brush area as soon as the selection has been done
+      //Clears the brush
+      line.select(".brush").call(brush.move, null); 
     }
 
     // Update axis and line position
@@ -165,7 +168,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
     window.violinPlot(undefined, minYear?.getFullYear(), maxYear?.getFullYear());
   }
 
-  // If user double click, reinitialize the chart
+  // If user double clicks, reinitialize the chart
   header_holder.on("dblclick", function () {
     x.domain(d3.extent(pass_count_sorted, (d) => new Date(d[0])));
     xAxis.transition().call(d3.axisBottom(x));

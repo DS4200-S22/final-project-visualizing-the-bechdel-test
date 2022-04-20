@@ -1,7 +1,7 @@
 // Set margins and dimensions
-const margin = { top: 50, right: 50, bottom: 50, left: 200 };
+const margin = { top: 10, right: 50, bottom: 50, left: 200 };
 const width = window.innerWidth; //- margin.left - margin.right;
-const height = 800; //- margin.top - margin.bottom;
+const height = 750; //- margin.top - margin.bottom;
 
 // Append SVG object to the body of the page to house bar chart .
 const svg3 = d3
@@ -102,7 +102,7 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         d3.axisBottom(x3).tickFormat((d) => Array.from(genreCounts.keys())[d])
       )
       .selectAll("text")
-      .attr("transform", "translate(-23,23)rotate(-45)")
+      .attr("transform", "translate(-23,23)rotate(-30)")
       .attr("font-size", "14px")
       .call((g) =>
         g
