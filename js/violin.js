@@ -187,7 +187,6 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
       const q3 = d3.quantile(expandedValues, 0.75);
       const max = d3.max(expandedValues.map(v => +v));
       const min = d3.min(expandedValues.map(v => +v));
-      console.log(min);
 
       // Mouse Handling
       const violinMouseOver = function (event, d) {

@@ -66,8 +66,8 @@ d3.csv("data/data_bechdel_newer.csv").then((data) => {
         .filter((g) => !currentlyFilteredGenres.has(g[0]))
         .sort(
           (a, b) =>
-            d3.sum(Array.from(a[1].values())) <
-            d3.sum(Array.from(b[1].values()))
+            d3.sum(Array.from(b[1].values())) -
+            d3.sum(Array.from(a[1].values()))
         )
     );
 
